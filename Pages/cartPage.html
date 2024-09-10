@@ -8,19 +8,29 @@ scale=1.0">
 </head>
 <body>
     <header>
-        <h1>Cart</h1>
+        <a href="index.html"><h1>GamersLab</h1></a>
         <nav>
             <ul>
-                <li><a href="index.html">Qazaq Steam</a></li>
                 <li><a href="searchPage.html">Search</a></li>
                 <li><a href="blogPage.html">News</a></li>
                 <li><a href="accountPage.html">Account</a></li>
-                <li><a href="cartPage.html">Cart</a></li>
             </ul>
-        </nav>
+        </nav><h1>Cart</h1>
     </header>
     <hr>
     <main>
+        <form action="#" method="get">
+            <label for="search"><h2>Search:</h2></label>
+            <input type="search" id="search" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+            <br><br>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option1">Free</option>
+                <option value="option2">Paid</option>
+            </select>
+            <br><br>
+        </form>
         <section>
             <figure>
                 <img src="https://shared.akamai.steamstatic.com//store_item_assets/steam/apps/391540/header.jpg?t=1579096091" width="400" height="200" alt=""> 
