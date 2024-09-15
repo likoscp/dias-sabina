@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="loadHeaderFooter.js"></script>
+    <title>Game</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <form action="#" method="get">
+            <label for="search">
+                <h2>Search:</h2>
+            </label>
+            <input type="search" id="search" name="search" placeholder="Search...">
+            <input type="submit" value="Search">
+            <br><br>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option1">Free</option>
+                <option value="option2">Paid</option>
+            </select>
+            <br><br>
+        </form>
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbWOL6AqgFI9M4eblTENTH_X5OYkzBMpvZA&s"
+                alt="Minecraft">
+            <h2>About</h2>
+            <p>Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a
+                work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own
+                feels overwhelming, then fear not! Let’s explore what Minecraft is all about!</p>
+            <h3>Tags:</h3>
+            <ol>
+                <li><a href="searchPage.html">Survival</a></li>
+                <li><a href="searchPage.html">Blocks</a></li>
+                <li><a href="searchPage.html">Online | Offline</a></li>
+            </ol>
+            <a href="https://www.minecraft.net/en-us">
+                <h3>Play Now!</h3>
+            </a>
+        </section>
+        <section>
+            <h3>Rating:</h3>
+            <p><a href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en">4.4/5<br>Google
+                    Play</a></p>
+            <p><a href="https://apps.apple.com/us/app/minecraft/id479516143">4.5/5<br>App Store - Apple</a></p>
+
+            <h2>Specifications</h2>
+            <dl>
+                <dt>Programming Language:</dt>
+                <dd>Java</dd>
+                <dt>Composer:</dt>
+                <dd>C418</dd>
+                <dt>Genres:</dt>
+                <dd>Action-adventure game, Nonlinear gameplay</dd>
+                <dt>Designers:</dt>
+                <dd>Markus Persson, Jens Bergensten</dd>
+            </dl>
+
+            <h2>Gallery</h2>
+            <figure>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg"
+                    alt="Village and Pillage">
+                <figcaption>Village-and-Pillage</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Update-Aquatic_1280x768.jpg"
+                    alt="Update Aquatic">
+                <figcaption>Update-Aquatic</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg"
+                    alt="Buzzy Bees">
+                <figcaption>Buzzy-Bees</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Review:</h3>
+            <blockquote>
+                "I don't like it. I like frontend more" - Just Guy
+            </blockquote>
+            <form action="addReview" method="post">
+                <label for="rating">Rating:</label><br>
+                <select id="rating" name="rating">
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+                <br>
+                <label for="name">Name:*</label><br>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="review">Review:*</label><br>
+                <textarea id="review" name="review" rows="5" required></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+</body>
+
+</html>
