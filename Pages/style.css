@@ -28,7 +28,7 @@ header {
 header a {
     margin: 0;
     color: #E2142F;
-
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 nav {
@@ -138,7 +138,7 @@ a:focus {
     overflow: hidden;
     border-right: 3px solid #ffffff;
     width: 0;
-    animation: typing 2s steps(40, end), blink-caret 0.85s step-end 2s forwards;
+    animation: typing 2s steps(30, end), blink-caret 0.75s step-end forwards;
     animation-fill-mode: forwards;
 }
 
@@ -147,7 +147,45 @@ a:focus {
     left: 30%;
     font-size: 40px;
     transform: translate(-50%, 50%);
-    animation: typing 2s steps(40, end) 2s forwards, blink-caret 0.85s step-end 2s forwards;
+    animation: typing 2s steps(30, end) 2s forwards, blink-caret 0.75s step-end forwards;
+}
+.section-background form {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    font-family: 'Pixelify Sans', sans-serif;
+    padding: 0;
+    opacity: 0;
+    animation: ani 0.5s steps(40, end) 4s forwards;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+input[type="search"] {
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 2px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #676f70;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #E2142F;
 }
 
 @keyframes typing {
