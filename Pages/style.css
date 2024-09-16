@@ -260,7 +260,7 @@ input[type="reset"]:hover {
     font-weight: bold;
 }
 
-div{
+.sections{
     margin: 40px auto;
     width: 500px;
     border: 2px solid rgb(49, 49, 49);
