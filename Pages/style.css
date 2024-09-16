@@ -224,3 +224,111 @@ input[type="reset"]:hover {
     padding: 20px;
     flex: 1;
 }
+
+.citate_text{
+    font-style: italic;
+    font-size: 25px;
+}
+
+.btn_change{
+    background-color: #db1331;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.game_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.game_list li{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+div{
+    margin: 40px auto;
+    width: 500px;
+    border: 2px solid rgb(49, 49, 49);
+}
+
+.news_page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.description{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.news_image {
+    width: 500px;
+    margin-right: 20px; 
+    border: none;
+}
+
+.news_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: left;
+    margin-right: 20px;
+    width: 450px;
+    border: none;
+}
+
+.game_window{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    border: 1px solid rgb(36, 36, 36);
+    background-color: #232036;
+}
+
+.game_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    width: 450px;
+    border: none;
+}
+
+.buttons{
+    border: none;
+}
+
+.btn_buy{
+    background-color: lime;
+    cursor: pointer;
+    padding: 12px 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.btn_remove{
+    background-color: red;
+    cursor: pointer;
+    padding: 12px 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
