@@ -8,9 +8,7 @@ html {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
-main {
-    padding: 20px;
-}
+
 header {
     background-color: #100C12;
     margin: 0;
@@ -72,15 +70,15 @@ footer {
     gap:1%
 }
 
-
 body {
     background-color: #1E1C2B;
     color: #fff;
 }
 
 main {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
+    margin-top: 50px;
 }
 
 form {
@@ -219,6 +217,26 @@ input[type="reset"]:hover {
         border-color: #ffffff;
     }
 }
+.account_sidebar {
+    background-color: #1E1C2B;
+    padding: 20px;
+    position:absolute;
+    width: 50%;
+    overflow: auto;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+.account_photo {
+    margin-left: 50%; 
+    width: 50%;
+    padding: 20px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.account_photo img{border-radius: 5px;}
+
+
+
 .sidebar {
     background-color: #1E1C2B;
     padding: 20px;
@@ -348,11 +366,23 @@ input[type="search"] {
 
 .btn_change{
     background-color: #db1331;
+    font-family: 'Pixelify Sans', sans-serif;
     border: none;
     color: #fff;
     padding: 10px 20px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn_change:hover{
+    background-color: #8D9899;
+    
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 2px;
     cursor: pointer;
     font-size: 16px;
 }
