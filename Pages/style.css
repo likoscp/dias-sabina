@@ -93,6 +93,9 @@ form {
     border-radius: 5px;
     padding: 60px;
 }
+#company, #years{
+    margin: 5% 0 10% 0;
+}
 
 input[type="search"] {
     padding: 10px;
@@ -232,7 +235,7 @@ input[type="reset"]:hover {
     border: 1px solid #676f70;
     margin-bottom: 15px;
     padding: 10px;
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
 }
 
@@ -276,15 +279,17 @@ input[type="search"] {
     
 }
 
-.content article {
+.game-elements {
     background-color: #232036;
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
-    transition: 0.3s ease;
+    display: flex;
 }
 
-.content article:hover {
+
+
+.game_list .sections:hover {
     background-color: #2C2A3E;
 }
 
@@ -292,18 +297,18 @@ input[type="search"] {
     width: 300px; 
     border-radius: 8px;
 }
-.content a:visited{
+/* .content a:visited{
     color: #fff;;
-}
+} */
 .content a:active{
     color: #fff;
 }
 .content a:hover{
     color: #8D9899
 }
-.game-elements{ 
-    text-align: left;
-}
+
+
+
 .section-search {
     padding: 10% 0 0%;
     text-align: center;
@@ -331,6 +336,10 @@ input[type="search"] {
     background-color: #E2142F; 
     color: #ffffff; 
 }
+.tag-link:focus {
+    background-color: #E2142F; 
+    color: #ffffff; 
+}
 
 .citate_text{
     font-style: italic;
@@ -352,6 +361,8 @@ input[type="search"] {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .game_list li{
@@ -374,6 +385,7 @@ input[type="search"] {
     width: 1000px;
     margin: 40px auto;
     text-align: center;
+    border: 2px solid rgb(49, 49, 49);
 }
 
 .description{
