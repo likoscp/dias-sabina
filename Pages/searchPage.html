@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="loadHeaderFooter.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>Search page</title>
 </head>
+
 <body>
     <header id="header"></header>
-    <!-- <section class="img">
-        
-        <div class="tags">
+    <main>
+        <section class="section-search">
+            <h2>Search</h2>
+            <p>Find your best game!</p><br>
+            <div class="tags">
+                <a href="#" class="tag-link">MMORPG</a>
+                <a href="#" class="tag-link">MMO</a>
+                <a href="#" class="tag-link">Story</a>
+                <a href="#" class="tag-link">Apocalypse</a>
+                <a href="#" class="tag-link">PIXEL</a>
+                <a href="#" class="tag-link">Shooters</a>
+                <a href="#" class="tag-link">Detective</a>
+                <a href="#" class="tag-link">Fantasy</a>
+            </div>
+        </section>
 
-        </div>
-    </section> -->
-    <section>
-        <div class="sidebar"></div>
-            
-            <p>Find your best game!</p>
+        <div class="sidebar">
+            <h2>Filter</h2>
+
 
             <form action="#" method="get">
 
                 <input type="search" id="search" name="search" placeholder="Search..."><br>
-                
+
                 <label for="price">Free</label>
                 <input type="range" id="price" name="price" min="0" max="10000"><br>
 
@@ -46,50 +57,62 @@
                 <input type="submit" value="Search"><br>
                 <input type="reset" value="Reset">
             </form>
-        </div>
-    </section>
-    <main>
-        <div class="results">
-            <h2>Game Results</h2>
 
-            <article>
+        </div>
+        <div class="content">
+            <h2>Game Results</h2>
+            <article class = "game-elements">
                 <figure>
 
-                    <img src="https://cdn2.unrealengine.com/egs-honkaiimpact3rd-mihoyolimited-s1-2560x1440-bba3636f7a5c.jpg" alt="Honka Impact" width="300">
                     <figcaption>
                         <dl>
-                            <dt><h3>Honkai Impact</h3></dt>
-                            <dd><blockquote><em>"Fight for all that is beautiful in this world"</em></blockquote> - Otto Apocalypse</dd>
+                            <dt>
+                                <h3>Honkai Impact</h3>
+                            </dt>
+                            <dd>
+                                <blockquote><em>"Fight for all that is beautiful in this world"</em></blockquote> - Otto
+                                Apocalypse
+                            </dd>
                             <dd>Apocalypse</dd>
                             <dd>Fantasy</dd>
                         </dl>
+                        <img src="https://cdn2.unrealengine.com/egs-honkaiimpact3rd-mihoyolimited-s1-2560x1440-bba3636f7a5c.jpg"
+                        alt="Honkai Impact" width="300">
                     </figcaption>
                 </figure>
             </article>
             <a href="elementPage.html" class="full-page-link">
-            <article>
-                <figure>
-                    <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg" alt="Minecraft" width="300">
-                    <figcaption>
-                        <dl>
-                            <dt><h3>Minecraft</h3></dt>
-                            <dd>Apocalypse</dd>
-                            <dd>Fantasy</dd>
-                        </dl>
-                    </figcaption>
-                </figure>
-            </article>
+                <article>
+                    <figure>
+                        
+                        <figcaption>
+                            <dl>
+                                <dt>
+                                    <h3>Minecraft</h3>
+                                </dt>
+                                <dd>Apocalypse</dd>
+                                <dd>Fantasy</dd>
+                                <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg"
+                            alt="Minecraft" width="300">
+                            </dl>
+                        </figcaption>
+                    </figure>
+                </article>
             </a>
 
             <article>
                 <figure>
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg?t=1579096091" alt="Undertale" width="300">
+                    
                     <figcaption>
                         <dl>
-                            <dt><h3>Undertale</h3></dt>
+                            <dt>
+                                <h3>Undertale</h3>
+                            </dt>
                             <dd>Apocalypse</dd>
                             <dd>Fantasy</dd>
                         </dl>
+                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg?t=1579096091"
+                        alt="Undertale" width="300">
                     </figcaption>
                 </figure>
             </article>
@@ -99,4 +122,5 @@
     <footer id="footer"></footer>
 
 </body>
+
 </html>
