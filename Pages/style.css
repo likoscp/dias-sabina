@@ -1,3 +1,4 @@
+
 body,
 html {
     margin: 0;
@@ -414,6 +415,7 @@ input[type="search"] {
     align-items: center;
     width: 1000px;
     margin: 40px auto;
+    gap: 3%;
     text-align: center;
     border: 2px solid rgb(49, 49, 49);
 }
