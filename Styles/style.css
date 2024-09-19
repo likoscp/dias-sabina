@@ -469,15 +469,19 @@ input[type="search"] {
 }
 
 .btn_buy{
-    background-color: lime;
+    background-color: #0495c1;
     cursor: pointer;
     padding: 12px 40px;
     margin: 5px;
     border-radius: 5px;
 }
 
+.btn_buy:hover{
+    background-color: #0381a7;
+}
+
 .btn_remove{
-    background-color: red;
+    background-color: #C5133C;
     cursor: pointer;
     padding: 12px 40px;
     margin: 5px;
