@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="module" src="/Js/games-script.js"></script>
     <title>Search page</title>
 </head>
@@ -39,16 +40,14 @@
 
                 <input type="search" id="search" name="search" placeholder="Search..."><br>
 
-                <label for="price">Free</label>
+                <label for="price">Free</label><br>
                 <input type="range" id="price" name="price" min="0" max="10000"><br>
 
-                <label for="company">Company</label>
                 <select id="company" name="company">
                     <option value="choose">Choose a company</option>
                 </select><br>
 
-                <label for="years">Years</label>
-                <select id="years" name="years">
+                <select id="years" name="years"><br>
                     <option value="choose">Choose a year</option>
                 </select><br>
 
@@ -61,11 +60,13 @@
 
         </div>
         <div class="content">
-            <h2>Game Results</h2>
             <div class="resultsLayer" id="resultsLayer"></div>
-
         </div>
         
+
+
+        </div>
+
     </main>
 
     <footer id="footer"></footer>
