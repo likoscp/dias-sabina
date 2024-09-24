@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="loadHeaderFooter.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,124 +16,205 @@
 
 <body>
     <header id="header"></header>
-    <main>
-        <section>
-            <h2>Account Information</h2>
-            <div class="account_sidebar">
-                <h3>Nickname:</h3>
-                <p>###</p>
-                <h3>E-mail:</h3>
-                <p>*****@gmail.com</p>
-                <h3>Citation</h3>
-                <blockquote class="citate_text">With great power comes great responsibility</blockquote>
-                <h3>Press here, if you want change email</h3>
-                <button class="btn_change">Change email</button>
-                <h3>Press here, if you want change password</h3>
-                <button class="btn_change">Change password</button>
+    <main class="container mt-4">
+        <section class="row">
+            <div class="col-lg-12 col-md-6 col-sm-12 pr-lg-5">
+                <h2 class="mt-4">Account Information</h2>
+                <div class="account_sidebar p-4 border rounded shadow-sm">
+                    <h3>Nickname:</h3>
+                    <p>###</p>
+                    <h3>E-mail:</h3>
+                    <p>*****@gmail.com</p>
+                    <h3>Citation</h3>
+                    <blockquote class="citate_text">"With great power comes great responsibility"</blockquote>
+                    <h3>Press here, if you want change email</h3>
+                    <button class="btn btn-danger mb-2">Change email</button>
+                    <h3>Press here, if you want change password</h3>
+                    <button class="btn btn-danger mb-2">Change password</button>
+                </div>
             </div>
-            <div class="account_photo">
-                <figure>
-                    <img src="https://img.freepik.com/premium-vector/flat-style-vector-game-developer-character-illustration_1033579-65248.jpg?size=626&ext=jpg"
-                        alt="profile_picture" width="300px">
-                    
-                    <h3>Press here, if you want change avatar</h3>
-                    <button class="btn_change"><input type="file"></button>
-                    <figcaption class="img_text">Profile Image</figcaption>
-                </figure>
+
+            <div class="col-lg-12 col-md-6 col-sm-12 ml-lg-4">
+                <div class="account_photo text-center p-4 border rounded shadow-sm">
+                    <figure>
+                        <img src="https://img.freepik.com/premium-vector/flat-style-vector-game-developer-character-illustration_1033579-65248.jpg?size=626&ext=jpg"
+                            alt="profile_picture" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+                        <h3>Press here, if you want change avatar</h3>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Change</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
+                        <figcaption class="img_text mt-2">Profile Image</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div class="account_content">
-                <h2>Library</h2>
-                Games:
-                <ul class="game_list">
-                    <div class="sections">
-                        <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg"
-                            width="400" length="100">
-                        <li>Minecraft</li><button class="btn_change">Install</button><button
-                            class="btn_change">Play</button><button class="btn_change">Delete</button><br>
+        <section class="row mt-4">
+            <div class="col-12 mb-4">
+                <h2 class="mt-4">Library</h2>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Buzzy-Bees_1280x768.jpg" width="500" height="250"
+                        class="card-img-top" alt="Minecraft">
+                    <div class="card-body">
+                        <h5 class="card-title">Minecraft</h5>
+                        <a href="#" class="btn btn-primary">Install</a>
+                        <a href="#" class="btn btn-success">Play</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220240/header.jpg?t=1682960396"
-                            width="400" height="200">
-                        <li>Far Cry 3</li><button class="btn_change">Install</button><button
-                            class="btn_change">Play</button><button class="btn_change">Delete</button><br>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220240/header.jpg?t=1682960396"
+                        class="card-img-top" alt="Far Cry 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Far Cry 3</h5>
+                        <a href="#" class="btn btn-primary">Install</a>
+                        <a href="#" class="btn btn-success">Play</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com//store_item_assets/steam/apps/391540/header.jpg?t=1579096091"
-                            width="400" height="200">
-                        <li>Undertale</li><button class="btn_change">Install</button><button
-                            class="btn_change">Play</button><button class="btn_change">Delete</button><br>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com//store_item_assets/steam/apps/391540/header.jpg?t=1579096091"
+                        class="card-img-top" alt="Undertale">
+                    <div class="card-body">
+                        <h5 class="card-title">Undertale</h5>
+                        <a href="#" class="btn btn-primary">Install</a>
+                        <a href="#" class="btn btn-success">Play</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/330px-Valorant_logo_-_pink_color_version.svg.png"
-                            width="400" height="200">
-                        <li>Valorant</li><button class="btn_change">Install</button><button
-                            class="btn_change">Play</button><button class="btn_change">Delete</button><br>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg?t=1719426374"
+                        class="card-img-top" alt="CS2">
+                    <div class="card-body">
+                        <h5 class="card-title">CS2</h5>
+                        <a href="#" class="btn btn-primary">Install</a>
+                        <a href="#" class="btn btn-success">Play</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg?t=1719426374"
-                            width="400" height="200">
-                        <li>CS2</li><button class="btn_change">Install</button><button
-                            class="btn_change">Play</button><button class="btn_change">Delete</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="row mt-4">
+            <div class="col-12 mb-4">
+                <h2>Favorites</h2>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1724072904"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">Rust</h5>
+                        <a href="#" class="btn btn-success">Buy</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
                     </div>
-                </ul>
-                Favorites:
-                <ul class="game_list">
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1724072904"
-                            width="400" height="200">
-                        <li>Rust</li><a href="#">Game Page</a><br><button class="btn_change">Buy</button><button
-                            class="btn_change">Add to whislist</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1666290860"
+                        class="card-img-top" alt="Terraria">
+                    <div class="card-body">
+                        <h5 class="card-title">Terraria</h5>
+                        <a href="#" class="btn btn-success">Buy</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1666290860"
-                            width="400" height="200">
-                        <li>Terraria</li><a href="#">Game Page</a><br><button class="btn_change">Buy</button><button
-                            class="btn_change">Add to whislist</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="row mt-4">
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4500/header.jpg?t=1686945417"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">S.T.A.L.K.E.R.: Shadow of Chernobyl</h5>
+                        <a href="#" class="btn btn-success">Buy</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4500/header.jpg?t=1686945417"
-                            width="400" height="200">
-                        <li>S.T.A.L.K.E.R.: Shadow of Chernobyl</li><a href="#">Game Page</a><br><button
-                            class="btn_change">Buy</button><button class="btn_change">Add to whislist</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/header.jpg?t=1694554810"
+                        class="card-img-top" alt="Terraria">
+                    <div class="card-body">
+                        <h5 class="card-title">Far Cry 5</h5>
+                        <a href="#" class="btn btn-success">Buy</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/header.jpg?t=1694554810"
-                            width="400" height="200">
-                        <li>Far Cry 5</li><a href="#">Game Page</a><br><button class="btn_change">Buy</button><button
-                            class="btn_change">Add to whislist</button>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-4">
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1711128146"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">Stardew Valley</h5>
+                        <a href="#" class="btn btn-success">Buy</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1711128146"
-                            width="400" height="200">
-                        <li>Stardew Valley</li><a href="#">Game Page</a><br><button
-                            class="btn_change">Buy</button><button class="btn_change">Add to whislist</button>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-4">
+            <div class="col-12 mb-4">
+                <h2>Expectations</h2>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://metro.co.uk/wp-content/uploads/2024/06/SEI_209756691-9a8c.jpg?quality=90&strip=all&zoom=1&resize=644%2C408" width="500" height="250"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">GTA VI</h5>
                     </div>
-                </ul>
-                Expectations:
-                <ol class="game_list">
-                    <div class="sections">
-                        <img src="https://metro.co.uk/wp-content/uploads/2024/06/SEI_209756691-9a8c.jpg?quality=90&strip=all&zoom=1&resize=644%2C408"
-                            width="400" height="200">
-                        <li>GTA VI</li>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg?t=1725896510"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">GTA VI</h5>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg?t=1725896510"
-                            width="400" height="200">
-                        <li>Call of Duty: Black Ops 6</li>
+                </div>
+            </div>
+        </section>
+        <section class="row mt-4">
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671210/header.jpg?t=1668504080"
+                        class="card-img-top" alt="Rust">
+                    <div class="card-body">
+                        <h5 class="card-title">Deltarune</h5>
                     </div>
-                    <div class="sections">
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671210/header.jpg?t=1668504080"
-                            width="400" height="200">
-                        <li>Deltarune</li>
-                    </div>
-                </ol>
+                </div>
             </div>
         </section>
     </main>
+
     <footer id="footer"></footer>
 </body>
 
 </html>
+
