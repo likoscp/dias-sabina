@@ -88,7 +88,6 @@ main {
 form {
     display: inline-block;
     border-radius: 5px;
-    padding: 15px;
 }
 .form_search form{
     display: inline-block;
@@ -254,15 +253,17 @@ input[type="reset"]:hover {
 }
 
 .sidebar input, .sidebar select {
-    background-color: #232036;
-    color: #ffffff;
-    border: 1px solid #676f70;
-    margin-bottom: 15px;
-    padding: 10px;
-    width: 80%;
+    color: #ffffff ;
+    border: 1px solid #676f70 ;
+    margin-bottom: 15px ;
+    padding: 10px !important;
+    width: 100% ;
+    font-family: 'Pixelify Sans', sans-serif;
     border-radius: 4px;
 }
-
+li{
+    list-style-type: none;
+}
 .sidebar input[type="submit"]{
     background-color: #E2142F;
     color: #fff;

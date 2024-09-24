@@ -1,0 +1,44 @@
+/* Base styles */
+.form-check-input {
+    appearance: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px!important;
+    height: 20px!important;
+    border: 1.2px solid #9b9b9b!important;
+    border-radius: 10px!important;
+    background-color: #fff;
+    position: relative!important;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    padding-left: 5px;
+}
+.form-check-label{
+
+        margin-right: 30px;
+    
+}
+.form-check{
+    display: flex !important;
+}
+.form-check-input::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s ease-in-out;
+}
+
+.form-check-input:checked {
+    background-color: #E2142F ;
+
+}
+
+.form-check-input:checked::before {
+    left: 20px;
+}
+

@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=/Styles/style.css>
     <script src="loadHeaderFooter.js"></script>
+    <link rel="stylesheet" href=/Styles/style-test.css>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="module" src="/Js/games-script.js"></script>
+
     <title>Search page</title>
 </head>
 
@@ -38,35 +41,40 @@
 
 
         <div class="sidebar">
-            <form action="#" method="get">
+            <form>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
 
-                <input type="search" id="search" name="search" placeholder="Search..."><br>
+                    <label for="price">Free</label><br>
+                    <input type="range" id="price" name="price" min="0" max="10000"><br>
 
-                <label for="price">Free</label><br>
-                <input type="range" id="price" name="price" min="0" max="10000"><br>
+                    <select class="form-control" name="company">
+                        <option>Company</option>
+                    </select>
+                    <select class="form-control" name="year">
+                        <option>Year</option>
+                    </select>
 
-                <select id="company" name="company">
-                    <option value="choose">Choose a company</option>
-                </select><br>
+                    
+                    <div class="form-check form-switch">
+                        
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Released</label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        
+                    </div>
 
-                <select id="years" name="years"><br>
-                    <option value="choose">Choose a year</option>
-                </select><br>
-
-                <label for="released">Released</label>
-                <input type="checkbox" id="released" name="released"><br>
-
-                <input type="submit" value="Search"><br>
-                <input type="reset" value="Reset">
+                    <input type="submit" value="Search"><br>
+                    <input type="reset" value="Reset">
+                </div>
             </form>
 
         </div>
         <div class="content">
-            
-                <div class="resultsLayer" id="resultsLayer"></div>
+
+            <div class="row" id="resultsLayer"></div>
 
         </div>
-        
+
 
 
         </div>
