@@ -7,8 +7,8 @@ const layouts = {
         <img src="${game.photoLink || defaultPhoto}" alt="${game.title}" 
             >
         <li><h2>${game.title}</h2></li>
-        <p>${game.description}</p><button
-            class="btn_change">Play</button><br>
+        <p>${game.description}</p>
+        <button class="btn_change">Play</button><br>
 
         
     `,

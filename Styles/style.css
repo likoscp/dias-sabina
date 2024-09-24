@@ -339,6 +339,9 @@ input[type="search"] {
     padding: 10% 0 0%;
     text-align: center;
     color: #8D9899;
+    background:
+    url('https://png.pngtree.com/png-vector/20220810/ourmid/pngtree-continuous-dice-gambling-pattern-on-a-white-backdrop-vector-artwork-vector-png-image_33155736.png');
+    background-position: center;
 }
 .tags {
     margin: 20px 0;
@@ -383,7 +386,16 @@ input[type="search"] {
     cursor: pointer;
     font-size: 16px;
 }
-.btn_change:hover{
+.btn-light{
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.btn-light:hover{
+    background-color: #db1331 !important;
+    border-color:#db1331 !important; 
+    color: #fff !important;
+}
+
+.btn_change:hover {
     background-color: #8D9899;
     
     border: none;
