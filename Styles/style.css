@@ -8,6 +8,9 @@ html {
     height: 100%;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    background-color: #1E1C2B !important;
+    color: #fff;
+    
 }
 
 header {
@@ -16,7 +19,7 @@ header {
     padding: 0;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
@@ -31,6 +34,10 @@ header a {
     margin: 0;
     color: #E2142F;
     font-family: 'Pixelify Sans', sans-serif;
+}
+header a:hover {
+    color: #8D9899;
+
 }
 
 nav {
@@ -71,15 +78,11 @@ footer {
     gap:1%
 }
 
-body {
-    background-color: #1E1C2B;
-    color: #fff;
-}
-
 main {
     padding: 40px;
     text-align: center;
     margin-top: 50px;
+    color: #FFF
 }
 
 form {
@@ -105,15 +108,17 @@ input[type="search"] {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #fff;
 }
 
 a:hover,
-a:focus {
-    text-decoration: none;
-    color: #8D9899;
+a:focus,
+a::after {
+    text-decoration: none !important;
+    color: #8D9899 ;
 }
+
 
 .section-background {
     background:
@@ -297,7 +302,9 @@ input[type="search"] {
     color: #fff;
     
 }
-
+.game-item{
+    width: 500px;
+}
 .game-elements {
     background-color: #232036;
     margin-bottom: 20px;
@@ -332,6 +339,9 @@ input[type="search"] {
     padding: 10% 0 0%;
     text-align: center;
     color: #8D9899;
+    background:
+    url('https://png.pngtree.com/png-vector/20220810/ourmid/pngtree-continuous-dice-gambling-pattern-on-a-white-backdrop-vector-artwork-vector-png-image_33155736.png');
+    background-position: center;
 }
 .tags {
     margin: 20px 0;
@@ -376,7 +386,16 @@ input[type="search"] {
     cursor: pointer;
     font-size: 16px;
 }
-.btn_change:hover{
+.btn-light{
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.btn-light:hover{
+    background-color: #db1331 !important;
+    border-color:#db1331 !important; 
+    color: #fff !important;
+}
+
+.btn_change:hover {
     background-color: #8D9899;
     
     border: none;

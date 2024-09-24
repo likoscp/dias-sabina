@@ -3,9 +3,14 @@ const defaultPhoto = "https://via.placeholder.com/300x200?text=No+Image";
 
 const layouts = {
     default: (game) => `
-        <h2>${game.title}</h2>
-        <img src="${game.photoLink || defaultPhoto}" alt="${game.title}">
+ 
+        <img src="${game.photoLink || defaultPhoto}" alt="${game.title}" 
+            >
+        <li><h2>${game.title}</h2></li>
         <p>${game.description}</p>
+        <button class="btn_change">Play</button><br>
+
+        
     `,
     detailed: (game) => `
         <h2>${game.title}</h2>

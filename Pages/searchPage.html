@@ -9,46 +9,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="module" src="/Js/games-script.js"></script>
     <title>Search page</title>
 </head>
 
+
 <body>
     <header id="header"></header>
+    <section class="section-search">
+        <h2>Search</h2>
+        <p>Find your best game!</p><br>
+        <div class="tags">
+            <button type="button" class="btn btn-light">MMORPG</button>
+            <button type="button" class="btn btn-light">MMO</button>
+            <button type="button" class="btn btn-light">Story</button>
+            <button type="button" class="btn btn-light">Apocalypse</button>
+            <button type="button" class="btn btn-light">PIXEL</button>
+            <button type="button" class="btn btn-light">Shooters</button>
+            <button type="button" class="btn btn-light">Detective</button>
+            <button type="button" class="btn btn-light">Fantasy</button>
+            <button type="button" class="btn btn-light">Gacha</button>
+            <button type="button" class="btn btn-light">Adventure</button>
+
+        </div>
+    </section>
     <main>
-        <section class="section-search">
-            <h2>Search</h2>
-            <p>Find your best game!</p><br>
-            <div class="tags">
-                <a href="#" class="tag-link">MMORPG</a>
-                <a href="#" class="tag-link">MMO</a>
-                <a href="#" class="tag-link">Story</a>
-                <a href="#" class="tag-link">Apocalypse</a>
-                <a href="#" class="tag-link">PIXEL</a>
-                <a href="#" class="tag-link">Shooters</a>
-                <a href="#" class="tag-link">Detective</a>
-                <a href="#" class="tag-link">Fantasy</a>
-            </div>
-        </section>
+
 
         <div class="sidebar">
-            <h2>Filter</h2>
-
-
             <form action="#" method="get">
 
                 <input type="search" id="search" name="search" placeholder="Search..."><br>
 
-                <label for="price">Free</label>
+                <label for="price">Free</label><br>
                 <input type="range" id="price" name="price" min="0" max="10000"><br>
 
-                <label for="company">Company</label>
                 <select id="company" name="company">
                     <option value="choose">Choose a company</option>
                 </select><br>
 
-                <label for="years">Years</label>
-                <select id="years" name="years">
+                <select id="years" name="years"><br>
                     <option value="choose">Choose a year</option>
                 </select><br>
 
@@ -61,11 +62,15 @@
 
         </div>
         <div class="content">
-            <h2>Game Results</h2>
-            <div class="resultsLayer" id="resultsLayer"></div>
+            
+                <div class="resultsLayer" id="resultsLayer"></div>
 
         </div>
         
+
+
+        </div>
+
     </main>
 
     <footer id="footer"></footer>
