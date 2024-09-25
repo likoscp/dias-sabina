@@ -42,7 +42,7 @@ const gamesDB = [{
 {
     id: 1, title: "Honkai Impact 3RD",
     description: "Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art.",
-    photoLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbWOL6AqgFI9M4eblTENTH_X5OYkzBMpvZA&s",
+    photoLink: "https://media.themoviedb.org/t/p/w500/zZV8joBQAeSQ6YacMTyigz63jQg.jpg",
     link: "https://www.minecraft.net/en-us",
     reviews: [{
         reviewer: "Just Guy",
