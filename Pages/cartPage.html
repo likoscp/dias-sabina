@@ -19,18 +19,24 @@
     <header id="header"></header>
     <hr>
     <main>
+        <h1>User's Cart</h1>
+        <br>
         <form action="#" method="get">
-            <label for="search">
-                <h2>Search:</h2>
-            </label>
-            <input type="search" id="search" name="search" placeholder="Search...">
-            <input type="submit" value="Search">
-            <br><br>
-            <label for="options">Choose an option:</label>
-            <select id="options" name="options">
-                <option value="option1">Free</option>
-                <option value="option2">Paid</option>
-            </select>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Type game name" aria-label="Game" aria-describedby="button-addon2">
+                <button class="btn btn-light" type="button" id="button-addon2">Search</button>
+              </div>              
+            <br>
+            <br>
+            <div class="input-group mb-3">
+                <select class="form-select" id="inputGroupSelect02" style="width: 220px; border-radius: 5px;">
+                  <option selected>Press here</option>
+                  <option value="1">Free</option>
+                  <option value="2">Paid</option>
+                  <option value="3">Sale</option>
+                </select>
+                <button class="btn btn-light" type="button" id="button-addon2">Search</button>
+              </div>
             <br><br>
         </form>
         <section class="game_window">
@@ -42,8 +48,8 @@
             <h2>Undertale</h2>
             <p>PC <br> 4.99&dollar;</p>
             <div class="buttons">
-            <a href="#" class="btn btn-primary">Buy</a>
-            <a href="#" class="btn btn-danger">Remove from Cart</a>
+            <a href="#" class="btn btn-primary btn-lg" style="margin-right: 10px;">Buy</a>
+            <a href="#" class="btn btn-danger btn-lg">Remove from Cart</a>
             </div>
             </div>
         </section>
@@ -56,9 +62,9 @@
             <h2>Hollow Knight</h2>
             <p>PC <br> Price: 9.99&dollar;</p>
             <div class="buttons">
-            <button class="btn_buy">Buy</button>
-            <button class="btn_remove">Remove from Cart</button>
-            </div>
+                <a href="#" class="btn btn-primary btn-lg" style="margin-right: 10px;">Buy</a>
+                <a href="#" class="btn btn-danger btn-lg">Remove from Cart</a>
+                </div>
             </div>
         </section>
         <section class="game_window">
@@ -70,8 +76,10 @@
             <h2>Celeste</h2>
             <p>PC <br> Price: 11.99&dollar;</p>
             <div class="buttons">
-            <button class="btn_buy">Buy</button>
-            <button class="btn_remove">Remove from Cart</button>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary btn-lg" style="margin-right: 10px;">Buy</a>
+                    <a href="#" class="btn btn-danger btn-lg">Remove from Cart</a>
+                    </div>
             </div>
             </div>
         </section>
@@ -84,15 +92,18 @@
             <h2>Minecraft</h2>
             <p>PC <br> Price:<br>Standart 14.99&dollar;</p>
             <div class="buttons">
-            <button class="btn_buy">Buy</button>
-            <button class="btn_remove">Remove from Cart</button>
-            </div>
+                <a href="#" class="btn btn-primary btn-lg" style="margin-right: 10px;">Buy</a>
+                <a href="#" class="btn btn-danger btn-lg">Remove from Cart</a>
+                </div>
             </div>
         </section>
-        Total price: n$
+        <h3>Total price: n$</h3>
+        <br>
         <div class="buttons">
-        <button class="btn_buy">Buy All</button>
-        <button class="btn_remove">Clear Cart</button>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary btn-lg" style="margin-right: 10px;">Buy All</a>
+                <a href="#" class="btn btn-danger btn-lg">Clear Cart</a>
+                </div>
         </div>
     </main>
     <br>
