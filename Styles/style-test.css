@@ -42,3 +42,8 @@
     left: 20px;
 }
 
+.card-img-top {
+
+    height: 300px !important; 
+    object-fit: cover;
+}

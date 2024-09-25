@@ -2,37 +2,53 @@ import gamesDB from './gamesDB.js';
 const defaultPhoto = "https://via.placeholder.com/300x200?text=No+Image";
 
 const layouts = {
-    default: (game) =>`
-        <div class="game_window">
-            <figure>
-                <img src="${game.photoLink || defaultPhoto}"
-                    width="400" height="200" alt="${game.title}">
-            </figure>
-            <div class="game_info">
-            <h2>${game.title}</h2>
-            <p>PC <br> 4.99&dollar;</p>
-            <button class="btn_change">Buy</button>
-
+    default: (game) => `
+        <div class="card">
+            <img class="card-img-top"
+                src="${game.photoLink || defaultPhoto}"
+                alt="${game.title}">
+            <div class="card-body">
+                <h5 class="card-title">${game.title}</h5>
+                <p class="card-text">${game.description}</p>
+                <a href="/Pages/elementPage.html" class="btn btn-secondary" style="margin-top: auto;">Play</a>
             </div>
-            </div>
-        `
-    ,
+        </div>
+    `,
     detailed: (game) => `
         <h2>${game.title}</h2>
-        <img src="${game.photoLink || defaultPhoto}" alt="${game.title}">
+        <img src="${game.photoLink || defaultPhoto}" alt="${game.title}" >
         <p>${game.description}</p>
         <h3>Requirements:</h3>
         <ul>
             ${game.requirements.map(req => `<li>${req.requirement}: ${req.version}</li>`).join('')}
         </ul>
         <div class="gallery">
-            ${game.gallery && game.gallery.length > 0
-            ? game.gallery.map(img => `<img src="${img || defaultPhoto}" alt="${game.title} image" class="gallery-image">`).join('')
-            : `<img src="${defaultPhoto}" alt="No images available" class="gallery-image">`}
+            <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    ${game.gallery.map((_, index) => `
+                        <li data-target="#featuredCarousel" data-slide-to="${index}" class="${index === 0 ? 'active' : ''}"></li>
+                    `).join('')}
+                </ol>
+                <div class="carousel-inner">
+                    ${game.gallery.map((img, index) => layouts.photoGallery({ photo: img, active: index === 0 })).join('')}
+                </div>
+                <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     `,
+    photoGallery: ({ photo, active }) => `
+        <div class="carousel-item ${active ? 'active' : ''}">
+            <img class="d-block w-100" src="${photo || defaultPhoto}" alt="Gallery Image">
+        </div>
+    `
 };
-
 
 const layers = {
     resultsLayer: {
@@ -44,14 +60,10 @@ const layers = {
         containerId: 'gameElement',
         layoutType: 'detailed',
         games: gamesDB.slice(0, 1),
-    }
-
-
+    },
 };
 
 function displayGames(layerConfig) {
-    console.log(document.getElementById('resultsLayer'));
-
     const targetList = document.getElementById(layerConfig.containerId);
     targetList.innerHTML = '';
     layerConfig.games.forEach(game => {
@@ -70,4 +82,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-

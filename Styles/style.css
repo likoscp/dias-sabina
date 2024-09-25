@@ -306,7 +306,8 @@ input[type="search"] {
     
 }
 .game-item{
-    width: 500px;
+    width: 350px;
+    cursor: pointer;
 }
 .game-elements {
     background-color: #232036;
@@ -343,7 +344,7 @@ input[type="search"] {
     text-align: center;
     color: #8D9899;
     background:
-    url('https://png.pngtree.com/png-vector/20220810/ourmid/pngtree-continuous-dice-gambling-pattern-on-a-white-backdrop-vector-artwork-vector-png-image_33155736.png');
+    url('/src/pattern.jpg');
     background-position: center;
 }
 .tags {
