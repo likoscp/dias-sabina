@@ -20,10 +20,11 @@
     <section class="section-background">
         <h2>Welcome to GamersLab!</h2>
         <p>Here you can Find your best game</p>
-        <form action="#" method="get">
-            <input type="search" id="search" name="search" placeholder="Search...">
-            <input type="submit" value="Search">
+        <form action="#" method="get" class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search..." aria-label="Search">
+            <button type="submit" class="btn btn-danger ml-10" style="margin-left: 10px;">Search</button>
         </form>
+        
     </section>
 
     <main>
@@ -78,10 +79,10 @@
         </section>
 
         <hr>
-        <section class="container"></section>
-            <h2>Popular News</h2><br>
-            <div class="card-deck">
-                <div class="card">
+        <section class="container">
+            <h2>Popular news</h2><br>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/untitled-design-32-2.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Silent Hill 2">
@@ -92,7 +93,7 @@
                         <a href="#" class="btn btn-secondary">Read more</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="col-lg-6 col-md-12">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/destiny-2-launch-art-feature.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Destiny 2">
@@ -103,7 +104,7 @@
                         <a href="#" class="btn btn-secondary">Read more</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="col-lg-6 col-md-12">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/switch-oled-undocked.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Nintendo Switch">
@@ -114,13 +115,25 @@
                         <a href="#" class="btn btn-secondary">Read more</a>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-12">
+                    <img class="card-img-top"
+                        src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/switch-oled-undocked.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
+                        alt="Nintendo Switch">
+                    <div class="card-body">
+                        <h5 class="card-title">Nintendo Switch</h5>
+                        <p class="card-text">A reliable insider suggests that a new Nintendo Switch OLED bundle is
+                            coming later this year with one of the console's best games included.</p>
+                        <a href="#" class="btn btn-secondary">Read more</a>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
         <section class="container">
             <h2>Latest News</h2><br>
-            <div class="card-deck">
-                <div class="card">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/untitled-design-32-2.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Silent Hill 2">
@@ -131,7 +144,7 @@
                         <a href="#" class="btn btn-secondary">Read more</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="col-lg-4 col-md-6">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/destiny-2-launch-art-feature.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Destiny 2">
@@ -142,7 +155,7 @@
                         <a href="#" class="btn btn-secondary">Read more</a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="col-lg-4 col-md-6">
                     <img class="card-img-top"
                         src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/09/switch-oled-undocked.jpg?q=49&fit=crop&w=1100&h=618&dpr=2"
                         alt="Nintendo Switch">
