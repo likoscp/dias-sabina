@@ -10,7 +10,10 @@ const gamesDB = [
                 reviewer: "Just Guy",
                 reviewText: "I don't like it. I like frontend more.",
                 rating: 3
-            }
+            },
+            {   reviewer: " Guy",
+                reviewText: "I like it. but like frontend more.",
+                rating: 3}
         ],
         news: [
             {
