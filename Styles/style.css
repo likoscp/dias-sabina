@@ -8,10 +8,11 @@ html {
     height: 100%;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    background-color: #1E1C2B !important;
+
     color: #fff;
     
 }
+body{     background-color: #1E1C2B ;}
 
 header {
     background-color: #100C12;
