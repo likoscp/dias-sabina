@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="loadHeaderFooter.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href=/Styles/style.css>
+    <script src="/Js/script.js"></script>
+    <title>Registration</title>
+    <!-- <link rel="stylesheet" href="/Styles/style.css"> -->
+<!--    <script src="/Js/dias.js"></script>-->
+</head>
+<body>
+    <header id="header"></header>
+    <hr>
+    <main>
+        <div class="container_register">
+            <h1 class="main_title">Registration</h1>
+            <label for="nameInput" class="labelElements">Name</label>
+            <br>
+            <input type="text" id="nameInput" class="inputType" placeholder="Mark">
+            <br>
+            <br>
+            <label for="surnameInput" class="labelElements">Surname</label>
+            <br>
+            <input type="text" id="surnameInput" class="inputType" placeholder="Tenson">
+            <br>
+            <br>
+            <label for="nicknameInput" class="labelElements">Nickname</label>
+            <br>
+            <input type="text" id="nicknameInput" class="inputType" placeholder="somenickname">
+            <p id="nickHint"></p>
+            <br>
+            <br>
+            <label for="emailInput" class="labelElements">Email</label>
+            <br>
+            <input type="text" id="emailInput" class="inputType" placeholder="example@gmail.com">
+            <p id="emailHint"></p>
+            <br>
+            <br>
+            <label for="passwordInput" class="labelElements">Password</label>
+            <br>
+            <input type="text" id="passwordInput" class="inputType" placeholder="**********">
+            <p id="passHint"></p>
+            <br>
+            <label for="passwordConfirmInput" class="labelElements">Confirm password</label>
+            <br>
+            <input type="text" id="passwordConfirmInput" class="inputType" placeholder="**********">
+            <br>
+            <br>
+            <input type="checkbox" id="checkTerms">
+            <label for="checkTerms">I agree with <a href="#" class="importantLink">terms and rules</a> this platform</label>
+            <br>
+            <button class="btn_change" id="regBtn">Register</button>
+            <p>Have an account? <a href="logIN.html" class="importantLink">Log in</a></p>
+            <p id="errorUser"></p>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>
