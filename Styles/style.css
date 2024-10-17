@@ -71,13 +71,19 @@ footer {
     background-color: #100C12;
     width: 100%;
     box-sizing: border-box;
-    /* display: flex; */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     width: 100%;
-    justify-content: end;
     color: #8D9899;
     gap: 1%
+}
+footer a{
+    color: #8D9899 !important;
+}
+footer a:hover{
+    color: #798182 !important;
 }
 
 main {
