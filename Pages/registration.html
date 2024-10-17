@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href=/Styles/style.css>
-    <script src="/Js/script.js"></script>
     <title>Registration</title>
     <!-- <link rel="stylesheet" href="/Styles/style.css"> -->
 <!--    <script src="/Js/dias.js"></script>-->
@@ -36,23 +35,24 @@
             <label for="nicknameInput" class="labelElements">Nickname</label>
             <br>
             <input type="text" id="nicknameInput" class="inputType" placeholder="somenickname">
-            <p id="nickHint"></p>
+            <p id="nickHint" class="hint"></p>
             <br>
             <br>
             <label for="emailInput" class="labelElements">Email</label>
             <br>
             <input type="text" id="emailInput" class="inputType" placeholder="example@gmail.com">
-            <p id="emailHint"></p>
+            <p id="emailHint" class="hint"></p>
             <br>
             <br>
             <label for="passwordInput" class="labelElements">Password</label>
             <br>
             <input type="text" id="passwordInput" class="inputType" placeholder="**********">
-            <p id="passHint"></p>
+            <p id="passHint" class="hint"></p>
             <br>
             <label for="passwordConfirmInput" class="labelElements">Confirm password</label>
             <br>
             <input type="text" id="passwordConfirmInput" class="inputType" placeholder="**********">
+            <p id="passEqual" class="hint"></p>
             <br>
             <br>
             <input type="checkbox" id="checkTerms">
@@ -60,9 +60,10 @@
             <br>
             <button class="btn_change" id="regBtn">Register</button>
             <p>Have an account? <a href="logIN.html" class="importantLink">Log in</a></p>
-            <p id="errorUser"></p>
+            <p id="checkReg" class="error"></p>
         </div>
     </main>
     <footer id="footer"></footer>
+    <script src="/Js/check_reg.js"></script>
 </body>
 </html>

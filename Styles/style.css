@@ -547,7 +547,7 @@ input[type="search"] {
     text-align: center;
     background-color: #38325f;
     width: 500px;
-    height: 770px;
+    height: 900px;
 }
 
 .container_login{
@@ -566,14 +566,13 @@ input[type="search"] {
     display: block;
     float: left;
     padding-left: 50px;
-    color: gray;
+    color: rgb(202, 202, 202);
     margin-bottom: 0;
 }
 
 .inputType{
     width: 400px;
     height: 25px;
-    border-radius: 10px;
 }
 
 .importantLink{
@@ -623,4 +622,16 @@ input[type="search"] {
 
 .faq.active .answer{
     max-height: 300px;
+}
+
+.hint{
+    text-align: left;
+    margin-left: 53px;
+    font-size: small;
+    color: gray;
+}
+
+.error{
+    font-size: 25px;
+    color: red;
 }
