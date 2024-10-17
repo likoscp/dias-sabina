@@ -244,7 +244,7 @@ input[type="reset"]:hover {
     position: absolute;
     width: 50%;
     overflow: auto;
-    color: #ffffff;
+    color: var(--text-color);
     box-sizing: border-box;
 }
 
@@ -252,7 +252,6 @@ input[type="reset"]:hover {
     margin-left: 50%;
     width: 50%;
     padding: 20px;
-    color: #fff;
     box-sizing: border-box;
 }
 
@@ -269,7 +268,7 @@ input[type="reset"]:hover {
     width: 250px;
     height: 100vh;
     overflow: auto;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .sidebar input,
@@ -330,7 +329,6 @@ input[type="search"] {
 .content {
     margin-left: 280px;
     padding: 20px;
-    color: #fff;
 
 }
 

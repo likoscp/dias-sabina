@@ -63,11 +63,11 @@ body.transition {
 }
 
 #themeIcon.bi-sun {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
 }
 
 #themeIcon.bi-moon {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 
