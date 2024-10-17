@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         } else {
-            console.error("Не найдены элементы для работы с модальным окном.");
+            console.error("error");
         }
     });
 });
