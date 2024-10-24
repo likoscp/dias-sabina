@@ -153,4 +153,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('form').reset();
         displayGames(gamesDB); 
     });
+
+    
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Delete') {
+            event.preventDefault(); 
+            document.querySelector('form').reset(); 
+            displayGames(gamesDB); 
+        }
+    });
 });
