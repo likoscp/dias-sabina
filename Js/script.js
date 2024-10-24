@@ -1,7 +1,12 @@
 
+document.getElementById('resetButton').addEventListener('click', function() {
+    document.querySelector('form').reset(); 
+});
+
 function toggleTheme() {
+    // DOM
     let body = document.body;
-    //  let a = document.a;
+    //  let a = document.querySelector('.a');
     // let containerRegister = document.querySelector('.container_register');
     let themeIcon = document.getElementById('themeIcon');
     let iconPath = document.getElementById('iconPath');
@@ -9,6 +14,7 @@ function toggleTheme() {
 
     if (body.style.backgroundColor === 'white' || body.style.backgroundColor === '') 
         {
+            
         body.style.color = 'white';
         body.style.backgroundColor = '#1E1C2B';
         // a.style.color = 'white';
