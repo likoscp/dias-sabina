@@ -1,7 +1,5 @@
 
-document.getElementById('resetButton').addEventListener('click', function() {
-    document.querySelector('form').reset(); 
-});
+
 
 function toggleTheme() {
     // DOM

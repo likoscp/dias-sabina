@@ -96,43 +96,61 @@ const layouts = {
     `
 };
 
+
 const layers = {
     resultsLayer: {
         containerId: 'resultsLayer',
         layoutType: 'default',
         games: gamesDB,
-    },
-    gameElement: {
-        containerId: 'gameElement',
-        layoutType: 'detailed',
-        games: gamesDB.slice(0, 1),
-    },
+    }
 };
 
-function displayGames(layerConfig) {
-    const targetList = document.getElementById(layerConfig.containerId);
+function displayGames(games) {
+    const targetList = document.getElementById('resultsLayer');
     targetList.innerHTML = '';
-    if (layerConfig.layoutType === 'default') {
-        layerConfig.games.forEach(game => {
-            const gameItem = document.createElement('div');
-            gameItem.classList.add('game-item');
-            gameItem.innerHTML = layouts[layerConfig.layoutType](game);
-            targetList.appendChild(gameItem);
-        });
-    } else if (layerConfig.layoutType === 'detailed') {
+    games.forEach(game => {
         const gameItem = document.createElement('div');
-        gameItem.classList.add('game-element');
-        gameItem.innerHTML = layouts[layerConfig.layoutType](layerConfig.games[0]);
+        gameItem.classList.add('game-item');
+        gameItem.innerHTML = layouts.default(game);
         targetList.appendChild(gameItem);
-    }
+    });
 }
 
+function filterGames() {
+    const searchTerm = document.querySelector('input[type="text"]').value;
+    const priceRange = document.getElementById('price').value;
+    const company = document.querySelector('select[name="company"]').value;
+    const year = document.querySelector('select[name="year"]').value;
+    const released = document.getElementById('flexSwitchCheckDefault').checked;
+    const selectedTags = Array.from(document.querySelectorAll('.tags input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.id.replace('Checkbox', ''));
+    let filteredGames = gamesDB;
+    if (searchTerm) {
+        filteredGames = filteredGames.filter(game => game.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    }
+    filteredGames = filteredGames.filter(game => game.priceRange <= priceRange);
+    if (company !== "Company") {
+        filteredGames = filteredGames.filter(game => game.company === company);
+    }
+    if (year !== "Year") {
+        filteredGames = filteredGames.filter(game => game.year == year);
+    }
 
+    if (released) {
+        filteredGames = filteredGames.filter(game => game.released);
+    }
+    if (selectedTags.length > 0) {
+        filteredGames = filteredGames.filter(game => 
+            selectedTags.some(tag => game.tags.includes(tag)) 
+        );
+    }
+    displayGames(filteredGames);
+}
 document.addEventListener('DOMContentLoaded', () => {
-    Object.values(layers).forEach(layerConfig => {
-        const targetList = document.getElementById(layerConfig.containerId);
-        if (targetList) {
-            displayGames(layerConfig);
-        }
+    displayGames(gamesDB);
+    document.querySelector('.btn-danger').addEventListener('click', filterGames);
+    document.getElementById('resetButton').addEventListener('click', () => {
+        document.querySelector('form').reset();
+        displayGames(gamesDB); 
     });
 });
