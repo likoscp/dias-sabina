@@ -55,6 +55,16 @@ passwordConfirmInput.addEventListener("input", function(){
     }
 });
 
+const playErrorSound = () => {
+    let sound = new Audio("/sound/error.mp3");
+    sound.play();
+};
+
+const playSuccessSound = () => {
+    let sound = new Audio("/sound/success.mp3");
+    sound.play();
+};
+
 regBtn.addEventListener("click", function() {
     const name = nameInput.value.trim();
     const surname = surnameInput.value.trim();
@@ -65,11 +75,15 @@ regBtn.addEventListener("click", function() {
 
     if (!name || !surname || !nick || !email || !password1 || !password2) {
         checkReg.textContent = `Fill all gaps`;
+        playErrorSound();
     } else if (password1 !== password2) {
         checkReg.textContent = `Passwords do not match`;
+        playErrorSound();
     } else if(email.indexOf("@") === -1){
         checkReg.textContent = `Not a valid email`;
+        playErrorSound();
     } else {
         checkReg.textContent = `Registration was successful`;
+        playSuccessSound();
     }
 });
