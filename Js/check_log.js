@@ -1,4 +1,4 @@
-const nicknameInput = document.getElementById("nicknameInput");
+const nicknameInput = document.getElementById("nicknameInput"); 
 const passwordInput = document.getElementById("passwordInput");
 const errorUser = document.getElementById("errorUser");
 const logBtn = document.getElementById("logBtn");
