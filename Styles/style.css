@@ -106,7 +106,7 @@ form {
 .form_search form {
     display: inline-block;
     border-radius: 5px;
-    padding: 60px;
+    padding-top: 60px;
 }
 
 #company,
@@ -397,6 +397,7 @@ input[type="search"] {
     width: 300px;
     border-radius: 8px;
 }
+img {width: 100%;}
 
 /* .content a:visited{
     color: #fff;;
@@ -532,7 +533,7 @@ input[type="search"] {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 1000px;
+    width: 100%;
     margin: 40px auto;
     gap: 3%;
     text-align: center;
@@ -541,13 +542,13 @@ input[type="search"] {
 
 .description {
     font-weight: bold;
-    font-size: 30px;
+    font-size: clamp(1rem, 5vw, 1.8rem);
     margin-bottom: 30px;
    
 }
 
 .news_image {
-    width: 500px;
+    width: 100%;
     margin-right: 20px;
     border: none;
 }
@@ -671,7 +672,7 @@ input[type="search"] {
 }
 
 .question h2{
-    font-size: clamp(1rem, 5vw, 1.8rem);;
+    font-size: clamp(1rem, 5vw, 1.8rem);
 }
 @media (max-width: 768px){
 
