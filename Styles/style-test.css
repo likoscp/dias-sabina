@@ -148,3 +148,33 @@ nav ul li a {
         display: flex;
     }
 }
+
+
+
+
+.main-container {
+    display: flex;
+}
+
+.content {
+    margin-left: 280px; 
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column-reverse; 
+    }
+
+    .sidebar, .content {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto; 
+        padding: 20px;
+    }
+}
