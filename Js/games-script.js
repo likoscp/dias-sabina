@@ -105,6 +105,8 @@ const layers = {
     }
 };
 
+
+
 function displayGames(games) {
     const targetList = document.getElementById('resultsLayer');
     targetList.innerHTML = '';
@@ -146,7 +148,57 @@ function filterGames() {
     }
     displayGames(filteredGames);
 }
+
+function saveFilterSettings() {
+    const searchTerm = document.querySelector('input[type="text"]').value;
+    const priceRange = document.getElementById('price').value;
+    const company = document.querySelector('select[name="company"]').value;
+    const year = document.querySelector('select[name="year"]').value;
+    const released = document.getElementById('flexSwitchCheckDefault').checked;
+
+    const selectedTags = Array.from(document.querySelectorAll('.tags .btn-light.active')).map(btn => btn.id);
+
+    localStorage.setItem('filterSettings', JSON.stringify({
+        searchTerm,
+        priceRange,
+        company,
+        year,
+        released,
+        selectedTags
+    }));
+}
+
+function loadFilterSettings() {
+    const savedSettings = JSON.parse(localStorage.getItem('filterSettings'));
+    if (!savedSettings) return;
+
+    document.querySelector('input[type="text"]').value = savedSettings.searchTerm || '';
+    document.getElementById('price').value = savedSettings.priceRange || 10000;
+    document.querySelector('select[name="company"]').value = savedSettings.company || 'Company';
+    document.querySelector('select[name="year"]').value = savedSettings.year || 'Year';
+    document.getElementById('flexSwitchCheckDefault').checked = savedSettings.released || false;
+
+
+    document.querySelectorAll('.tags .btn-light').forEach(btn => {
+        btn.classList.toggle('active', savedSettings.selectedTags.includes(btn.id));
+    });
+}
+
+
+document.querySelector('input[type="text"]').addEventListener('input', saveFilterSettings);
+document.getElementById('price').addEventListener('change', saveFilterSettings);
+document.querySelector('select[name="company"]').addEventListener('change', saveFilterSettings);
+document.querySelector('select[name="year"]').addEventListener('change', saveFilterSettings);
+document.getElementById('flexSwitchCheckDefault').addEventListener('change', saveFilterSettings);
+document.querySelectorAll('.tags .btn-light').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active'); 
+        saveFilterSettings();
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
+    loadFilterSettings();
     displayGames(gamesDB);
     document.querySelector('.btn-danger').addEventListener('click', filterGames);
     document.getElementById('resetButton').addEventListener('click', () => {
