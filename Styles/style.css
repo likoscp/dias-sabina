@@ -397,7 +397,7 @@ input[type="search"] {
     width: 300px;
     border-radius: 8px;
 }
-img {width: 100%;}
+img {width: 100%; margin-left: 3%;padding-right: 3%;}
 
 /* .content a:visited{
     color: #fff;;
@@ -565,9 +565,9 @@ img {width: 100%;}
 
 .game_window {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
-    width: 1000px;
+    width: 100%;
     margin: 40px auto;
     text-align: center;
     border: 1px solid rgb(36, 36, 36);
@@ -585,6 +585,7 @@ img {width: 100%;}
 
 .buttons {
     border: none;
+    
 }
 
 .btn_buy {
@@ -593,6 +594,7 @@ img {width: 100%;}
     padding: 12px 40px;
     margin: 5px;
     border-radius: 5px;
+
 }
 
 .btn_buy:hover {
@@ -622,6 +624,12 @@ img {width: 100%;}
     width: 500px;
     height: 520px;
 }
+@media (max-width: 768px) {
+    .container_login{
+    width: 100%;}
+    .container_register{width: 100%;}
+    
+}
 
 .main_title{
     padding-top: 35px;
@@ -638,6 +646,12 @@ img {width: 100%;}
 .inputType{
     width: 400px;
     height: 25px;
+}
+@media (max-width: 768px) {
+    .inputType{
+        width: 80%;
+        height: 25px;
+    }
 }
 
 .importantLink{
