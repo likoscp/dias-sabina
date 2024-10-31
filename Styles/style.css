@@ -13,6 +13,11 @@ body {
     background-color: #1E1C2B;
     color: white;
 }
+@media (max-width: 768px) {
+    body {
+        font-size: small;
+    }
+}
 
 header {
     background-color: #100C12;
@@ -89,7 +94,9 @@ main {
     padding: 40px;
     text-align: center;
     margin-top: 50px;
-}
+} 
+@media (max-width: 768px) {main {padding: 0px;margin-top: 10px;
+}}
 
 form {
     display: inline-block;
@@ -138,16 +145,23 @@ a::after {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+    position: relative;
+    
+    color: white;
 }
+
+.text-animation{
+    padding-top: 15%;
+    padding-left: 5%;
+}
+
 
 .section-background h2,
 .section-background p {
-    position: absolute;
-    top: 40%;
-    left: 30%;
+
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 50px;
-    transform: translate(-50%, 50%);
+    font-size: clamp(16px, 5vw, 50px);
+    /* transform: translate(-50%, 50%); */
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #ffffff;
@@ -157,21 +171,49 @@ a::after {
 }
 
 .section-background p {
-    top: 50%;
-    left: 30%;
-    font-size: 40px;
-    transform: translate(-50%, 50%);
+    /* top: 50%;
+    left: 30%; */
+    font-size: clamp(16px, 5vw, 40px);
+    /* transform: translate(-50%, 50%); */
     animation: typing 2s steps(30, end) 2s forwards, blink-caret 0.75s step-end forwards;
 }
 
 .section-background form {
-    position: absolute;
-    top: 70%;
-    left: 5%;
+
     font-family: 'Pixelify Sans', sans-serif;
     padding: 0;
     opacity: 0;
+
     animation: ani 0.5s steps(40, end) 4s forwards;
+}
+.section-background form .form_search {
+    width: clamp(200px, 5vw, 300px);
+    height: clamp(25px, 5vw, 37.6px);
+    font-family: 'Pixelify Sans', sans-serif;
+    padding-left: 3%;
+}
+@media (max-width: 1320px) {
+    .section-background h2,
+.section-background p  {
+   
+        text-wrap-mode: wrap;
+    }
+    .text-animation{
+        padding-top: 30%;
+    }
+    
+}
+@media (max-width: 786px) {
+    .section-background h2,
+.section-background p  {
+   
+        text-wrap-mode: wrap;
+    }
+    .text-animation{
+        padding-top: 80%;
+    }
+     
+    
 }
 
 @keyframes ani {
@@ -426,6 +468,25 @@ input[type="search"] {
 
 .btn-light {
     font-family: 'Pixelify Sans', sans-serif;
+    display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .btn-light:hover {
@@ -606,10 +667,14 @@ input[type="search"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 5%;
 }
 
 .question h2{
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 5vw, 1.8rem);;
+}
+@media (max-width: 768px){
+
 }
 
 .answer{
@@ -637,4 +702,138 @@ input[type="search"] {
 .error{
     font-size: 25px;
     color: red;
+}
+
+
+
+.form-check-input {
+    appearance: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px!important;
+    height: 20px!important;
+    border: 1.2px solid #9b9b9b!important;
+    border-radius: 10px!important;
+    background-color: #fff;
+    position: relative!important;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    padding-left: 5px;
+}
+.form-check-label{
+
+        margin-right: 30px;
+    
+}
+.form-check{
+    display: flex !important;
+}
+.form-check-input::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s ease-in-out;
+}
+
+.form-check-input:checked {
+    background-color: #E2142F ;
+
+}
+
+.form-check-input:checked::before {
+    left: 20px;
+}
+
+.card-img-top {
+    max-height: 500px;
+    height: auto; 
+    object-fit: cover;
+}
+@media (max-width: 768px){
+    .card-img-top {
+        max-height: 200px;
+        height: 100%; 
+        object-fit: cover;
+    }
+}
+.gallery{
+    padding-top: 100px;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+body.transition {
+    transition: background-color 0.5s ease;
+}
+
+#themeIcon {
+    transition: transform 0.5s ease;
+}
+
+#themeIcon.bi-sun {
+    transform: rotate(90deg);
+}
+
+#themeIcon.bi-moon {
+    transform: rotate(0deg);
+}
+
+
+
+.modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+}
+
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;}
+
+#contactForm{
+    display: grid !important;
+}
+.modal input, .modal textarea{
+    margin-bottom: 1rem;
+    border-radius: 3px;
+
+}
+.modal button{
+    margin-bottom: 0;
+}
+.modal button:hover{
+    margin-bottom: 0;
 }
