@@ -29,15 +29,16 @@
                 <h2 class="mt-4">Account Information</h2>
                 <div class="account_sidebar p-4">
                     <h3>Nickname:</h3>
-                    <p>###</p>
+                    <p id="userNickName"></p>
                     <h3>E-mail:</h3>
-                    <p>*****@gmail.com</p>
+                    <p id="userEmail"></p>
                     <h3>Citation</h3>
                     <blockquote class="citate_text">"With great power comes great responsibility"</blockquote>
                     <h3>Press here, if you want change email</h3>
-                    <button class="btn btn-danger mb-2">Change email</button>
+                    <button id="newEmailInput" class="btn btn-danger mb-2">Change email</button>
                     <h3>Press here, if you want change password</h3>
-                    <button class="btn btn-danger mb-2">Change password</button>
+                    <button id="newPasswordInput" class="btn btn-danger mb-2">Change password</button>
+                    <br>
                 </div>
             </div>
 
@@ -216,6 +217,7 @@
                         <h5 class="card-title">Deltarune</h5>
                     </div>
                 </div>
+                <button id="logout" class="btn_remove">logout</button>
             </div>
         </section>
     </main>
@@ -223,6 +225,8 @@
     <footer id="footer"></footer>
     <script src="/Js/script.js"></script>
     <script src="/Js/data.js"></script>
+    <script src="/Js/user.js"></script>
+    <script src="/Js/header.js"></script>
 </body>
 
 </html>

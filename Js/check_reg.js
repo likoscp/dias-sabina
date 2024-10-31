@@ -83,7 +83,28 @@ regBtn.addEventListener("click", function() {
         checkReg.textContent = `Not a valid email`;
         playErrorSound();
     } else {
+        const user = {
+            name: name,
+            surname: surname,
+            nickname: nick,
+            email: email,
+            password: password1 
+        };
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        
+        users.push(user);
+        
+        localStorage.setItem("users", JSON.stringify(users));
+
         checkReg.textContent = `Registration was successful`;
         playSuccessSound();
+
+        nameInput.value = "";
+        surnameInput.value = "";
+        nicknameInput.value = "";
+        emailInput.value = "";
+        passwordInput.value = "";
+        passwordConfirmInput.value = "";
     }
 });
