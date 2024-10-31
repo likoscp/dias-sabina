@@ -852,3 +852,9 @@ body.transition {
 .modal button:hover{
     margin-bottom: 0;
 }
+
+.account{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
