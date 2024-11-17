@@ -46,65 +46,9 @@
               </div>
             <br><br>
         </form>
-        <section class="game_window">
-            <figure>
-                <img src="https://shared.akamai.steamstatic.com//store_item_assets/steam/apps/391540/header.jpg?t=1579096091"
-                    width="400" height="200" alt="">
-            </figure>
-            <div class="game_info">
-            <h2>Undertale</h2>
-            <p>PC <br> 4.99&dollar;</p>
-            <div class="buttons">
-            <a href="#" class="btn btn-primary btn" style="margin-right: 10px; padding-bottom:10px;">Buy</a>
-            <a href="#" class="btn btn-danger btn">Remove from Cart</a>
-            </div>
-            </div>
-        </section>
-        <section class="game_window">
-            <figure>
-                <img src="https://shared.akamai.steamstatic.com//store_item_assets/steam/apps/367520/header.jpg?t=1695270428"
-                    width="400" height="200" alt="">
-            </figure>
-            <div class="game_info">
-            <h2>Hollow Knight</h2>
-            <p>PC <br> Price: 9.99&dollar;</p>
-            <div class="buttons">
-                <a href="#" class="btn btn-primary btn" style="margin-right: 10px; padding-bottom:10px;">Buy</a>
-                <a href="#" class="btn btn-danger btn">Remove from Cart</a>
-                </div>
-            </div>
-        </section>
-        <section class="game_window">
-            <figure>
-                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525"
-                    width="400" height="200" alt="">
-            </figure>
-            <div class="game_info">
-            <h2>Celeste</h2>
-            <p>PC <br> Price: 11.99&dollar;</p>
-            <div class="buttons">
-                <div class="buttons">
-                    <a href="#" class="btn btn-primary btn" style="margin-right: 10px; padding-bottom:10px;">Buy</a>
-                    <a href="#" class="btn btn-danger btn">Remove from Cart</a>
-                    </div>
-            </div>
-            </div>
-        </section>
-        <section class="game_window">
-            <figure>
-                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a"
-                    width="400" height="200" alt="">
-            </figure>
-            <div class="game_info">
-            <h2>Minecraft</h2>
-            <p>PC <br> Price:<br> 14.99&dollar;</p>
-            <div class="buttons">
-                <a href="#" class="btn btn-primary btn" style="margin-right: 10px; padding-bottom:10px;">Buy</a>
-                <a href="#" class="btn btn-danger btn">Remove from Cart</a>
-                </div>
-            </div>
-        </section>
-        <h3>Total price: n$</h3>
+        
+            <h3>Total price: <span id="totalPrice">0.00</span>$</h3>
+            <div id="gamesContainer"></div>
         <br>
         <div class="buttons">
             <div class="buttons">
@@ -119,6 +63,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Js/script.js"></script>
     <script src="/Js/data.js"></script>
+    <script src="/Js/user.js"></script>
+    <script src="/Js/header.js"></script>
+    <script src="/Js/cartDB.js"></script>
 </body>
 
 </html>
