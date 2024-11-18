@@ -417,7 +417,7 @@ img {width: 100%; }
     text-align: center;
     color: #8D9899;
     background:
-        url('/src/pattern.jpg');
+        url('/dias-sabina/src/pattern.jpg');
     background-position: center;
 }
 
@@ -709,9 +709,8 @@ img {width: 100%; }
     -moz-appearance: none;
     width: 40px!important;
     height: 20px!important;
-    border: 1.2px solid #9b9b9b!important;
     border-radius: 10px!important;
-    background-color: #fff;
+    background-color: #b6b6b6;
     position: relative!important;
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
