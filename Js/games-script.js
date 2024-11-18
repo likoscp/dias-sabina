@@ -143,7 +143,7 @@ function filterGames() {
     }
     if (selectedTags.length > 0) {
         filteredGames = filteredGames.filter(game => 
-            selectedTags.some(tag => game.tags.includes(tag)) 
+            selectedTags.every(tag => game.tags.includes(tag)) 
         );
     }
     displayGames(filteredGames);
