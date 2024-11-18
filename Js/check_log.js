@@ -25,7 +25,7 @@ logBtn.addEventListener("click", function() {
         emailInput.value = "";
         passwordInput.value = "";
 
-        window.location.reload();
+        window.location.href = "accountPage.html";
     } else {
         errorUser.textContent = `Invalid username, email, or password.`;
         errorUser.style.color = "red";
