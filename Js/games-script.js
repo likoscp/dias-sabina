@@ -216,3 +216,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+    const checkboxes = document.querySelectorAll('.section-search .hide-checkbox');
+
+    function toggleLabelClass(checkbox) {
+        if (checkbox.checked) {
+            checkbox.parentNode.classList.add('active');
+        } else {
+            checkbox.parentNode.classList.remove('active');
+        }
+    }
+    checkboxes.forEach(function(checkbox) {
+        toggleLabelClass(checkbox);
+        checkbox.addEventListener('change', function() {
+            toggleLabelClass(checkbox);
+        });
+    });

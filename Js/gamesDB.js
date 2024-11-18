@@ -3,7 +3,7 @@ const gamesDB = [
         id: 0,
         title: "Minecraft",
         company: "Mojang",
-        priceRange: 0,
+        priceRange: 5000,
         year: 2021,
         released: true,
         tags: ["mmorpg", "fantasy", "shoouter", "adventure"],
