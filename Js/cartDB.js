@@ -70,11 +70,26 @@ function removeGame(id) {
 }
 
 function buyGame(id) {
-    const game = gamesDB.find((game) => game.id === id);
-    if (game) {
-        totalPrice += game.price; 
-        updateTotalPrice(); 
+    const index = gamesDB.findIndex((game) => game.id === id);
+    if (index !== -1) {
+        totalPrice += gamesDB[index].price; // Добавляем цену к общей сумме
+        gamesDB.splice(index, 1); // Удаляем игру из базы данных
+        updateTotalPrice(); // Обновляем отображение общей суммы
+        renderGames(); // Перерисовываем список игр
     }
 }
+
+function buyAll() {
+    totalPrice += gamesDB.reduce((sum, game) => sum + game.price, 0); 
+    gamesDB.length = 0; 
+    updateTotalPrice(); 
+    renderGames(); 
+}
+
+function clearAll() {
+    gamesDB.length = 0;
+    renderGames(); 
+}
+
 
 renderGames();
