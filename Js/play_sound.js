@@ -10,9 +10,14 @@ const gacha = document.getElementById("gachaBtn");
 const adventure = document.getElementById("adventureBtn");
 
 mmorpg.addEventListener("change", () => {
-    let sound = new Audio("/dias-sabina/sound/mmorpg.mp3");
-    sound.play();
-})
+    let label = mmorpg.closest('label');
+    if (mmorpg.checked) {
+        playSound("/dias-sabina/sound/mmorpg.mp3");
+        label.classList.add('active');
+    } else {
+        label.classList.remove('active');
+    }
+});
 
 mmo.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/mmorpg.mp3");
