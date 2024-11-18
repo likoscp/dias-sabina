@@ -125,8 +125,7 @@ function filterGames() {
     const year = document.querySelector('select[name="year"]').value;
     const released = document.getElementById('flexSwitchCheckDefault').checked;
     const selectedTags = Array.from(document.querySelectorAll('.tags input[type="checkbox"]:checked'))
-    .map(checkbox => checkbox.id.replace('Btn', ''))
-    .map(s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase());
+    .map(checkbox => checkbox.id);
     let filteredGames = gamesDB;
     if (searchTerm) {
         filteredGames = filteredGames.filter(game => game.title.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -158,8 +157,7 @@ function saveFilterSettings() {
     const released = document.getElementById('flexSwitchCheckDefault').checked;
 
     const selectedTags = Array.from(document.querySelectorAll('.tags input[type="checkbox"]:checked'))
-    .map(checkbox => checkbox.id.replace('Btn', ''))
-    .map(tag => tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase());
+    .map(checkbox => checkbox.id);
 
     localStorage.setItem('filterSettings', JSON.stringify({
         searchTerm,
