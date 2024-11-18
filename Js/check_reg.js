@@ -100,6 +100,8 @@ regBtn.addEventListener("click", function() {
         checkReg.textContent = `Registration was successful`;
         playSuccessSound();
 
+        window.location.href = "logIN.html";
+
         nameInput.value = "";
         surnameInput.value = "";
         nicknameInput.value = "";
