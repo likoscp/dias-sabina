@@ -397,7 +397,7 @@ input[type="search"] {
     width: 300px;
     border-radius: 8px;
 }
-img {width: 100%; margin-left: 3%;padding-right: 3%;}
+img {width: 100%; }
 
 /* .content a:visited{
     color: #fff;;
