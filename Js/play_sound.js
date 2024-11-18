@@ -9,52 +9,52 @@ const fantasy = document.getElementById("fantasyBtn");
 const gacha = document.getElementById("gachaBtn");
 const adventure = document.getElementById("adventureBtn");
 
-mmorpg.addEventListener("click", () => {
+mmorpg.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/mmorpg.mp3");
     sound.play();
 })
 
-mmo.addEventListener("click", () => {
+mmo.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/mmorpg.mp3");
     sound.play();
 })
 
-apocalypse.addEventListener("click", () => {
+apocalypse.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/apocalypse.mp3");
     sound.play();
 })
 
-story.addEventListener("click", () => {
+story.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/undertale.m4a");
     sound.play();
 });
 
-pixel.addEventListener("click", () => {
+pixel.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/pixel.mp3")
     sound.play();
 });
 
-shoouter.addEventListener("click", () => {
+shoouter.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/shoouter.mp3")
     sound.play();
 });
 
-detective.addEventListener("click", () => {
+detective.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/detective.mp3");
     sound.play();
 })
 
-fantasy.addEventListener("click", () => {
+fantasy.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/fantasy.mp3");
     sound.play();
 })
 
-gacha.addEventListener("click", () => {
+gacha.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/fantasy.mp3");
     sound.play();
 })
 
-adventure.addEventListener("click", () => {
+adventure.addEventListener("change", () => {
     let sound = new Audio("/dias-sabina/sound/adventure.mp3");
     sound.play();
 })
