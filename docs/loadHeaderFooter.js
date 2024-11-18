@@ -12,8 +12,8 @@ function loadHTML(url, elementId) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadHTML('/dias-sabina/Pages/header.html', 'header');
-    loadHTML('/dias-sabina/Pages/footer.html', 'footer').then(() => {
+    loadHTML('/dias-sabina/docs/header.html', 'header');
+    loadHTML('/dias-sabina/docs/footer.html', 'footer').then(() => {
 
         const modal = document.getElementById("contactModal");
         const contactLink = document.querySelector('a[href="#contactModalWindow"]');
