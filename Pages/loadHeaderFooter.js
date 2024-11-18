@@ -8,12 +8,12 @@ function loadHTML(url, elementId) {
         .catch(error => console.error('Error loading HTML:', error));
 }
 
-loadHTML('./Pages/header.html', 'header');
+loadHTML('/dias-sabina/Pages/header.html', 'header');
 
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    loadHTML('./Pages/footer.html', 'footer').then(() => {
+    loadHTML('/dias-sabina/Pages/footer.html', 'footer').then(() => {
 
         const modal = document.getElementById("contactModal");
         const contactLink = document.querySelector('a[href="#contactModalWindow"]');
