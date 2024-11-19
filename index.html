@@ -219,7 +219,12 @@
     <script src="./Js/play_sound.js"></script>
     <script src="./Js/user.js"></script>
     <script src="./Js/header.js"></script>
-    <script scr="./Js/searchHandler.js"></script>
+    <script>document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var searchQuery = document.getElementById('searchQuery').value;
+        window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
+        
+      });</script>
     <footer id="footer"></footer>
 </body>
 
