@@ -99,9 +99,9 @@ const gamesDB = [
             }
         ],
         gallery: [
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.peakpx.com%2Fen%2Fhd-wallpaper-desktop-vmzhh&psig=AOvVaw08DCeDTT3NA68Dgx5y--uA&ust=1732070895049000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiO14ux54kDFQAAAAAdAAAAABAJ",
-            "https://motionbgs.com/media/2195/elysia-honkai-impact-3.960x540.mp4",
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1245090&psig=AOvVaw08DCeDTT3NA68Dgx5y--uA&ust=1732070895049000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiO14ux54kDFQAAAAAdAAAAABBB"
+            "https://images7.alphacoders.com/107/1079914.png",
+            "https://images5.alphacoders.com/108/1088594.png",
+            "https://images7.alphacoders.com/124/1245090.jpg"
         ]
     },
     {
