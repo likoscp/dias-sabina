@@ -27,23 +27,9 @@
         </section>
         <h1>User's Cart</h1>
         <br>
-        <form action="#" method="get">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Type game name" aria-label="Game" aria-describedby="button-addon2">
-                <button class="btn btn-light" type="button" id="button-addon2">Search</button>
-              </div>              
-            <br>
-            <br>
-            <div class="input-group mb-3">
-                <select class="form-select" id="inputGroupSelect02" style="width: 220px; border-radius: 5px;">
-                  <option selected>Press here</option>
-                  <option value="1">Free</option>
-                  <option value="2">Paid</option>
-                  <option value="3">Sale</option>
-                </select>
-                <button class="btn btn-light" type="button" id="button-addon2">Search</button>
-              </div>
-            <br><br>
+        <form id="searchForm" action="#" method="get" class="d-flex">
+            <input id="searchQuery" class="form_search" type="text" name="search" placeholder="Search..." aria-label="Search">
+            <button type="submit" class="btn-danger" style="margin-left: 10px;">Search</button>
         </form>
         
             <h3>Total price: <span id="totalPrice">0.00</span>$</h3>
@@ -66,6 +52,12 @@
     <script src="/dias-sabina/Js/header.js"></script>
     <script src="/dias-sabina/Js/cartDB.js"></script>
     <script scr="./Js/searchHandler.js"></script>
+    <script>document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var searchQuery = document.getElementById('searchQuery').value;
+        window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
+        
+      });</script>
 </body>
 
 </html>
