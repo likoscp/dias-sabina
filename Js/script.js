@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('searchForm').addEventListener('submit', function(event) {
       event.preventDefault(); 
       var searchQuery = document.getElementById('searchQuery').value;
-      window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
+      var searchPageUrl = '/dias-sabina/docs/searchPage.html';
+      console.log(searchPageUrl);
+      window.location.href = `${searchPageUrl}?search!=${encodeURIComponent(searchQuery)}`;
+
     });
 });
 
