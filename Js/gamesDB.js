@@ -99,9 +99,9 @@ const gamesDB = [
             }
         ],
         gallery: [
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_herrscher_of_void.jpg",
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_theresa.jpg",
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_honkai_impact.jpg"
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.peakpx.com%2Fen%2Fhd-wallpaper-desktop-vmzhh&psig=AOvVaw08DCeDTT3NA68Dgx5y--uA&ust=1732070895049000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiO14ux54kDFQAAAAAdAAAAABAJ",
+            "https://motionbgs.com/media/2195/elysia-honkai-impact-3.960x540.mp4",
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Fbig.php%3Fi%3D1245090&psig=AOvVaw08DCeDTT3NA68Dgx5y--uA&ust=1732070895049000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiO14ux54kDFQAAAAAdAAAAABBB"
         ]
     },
     {
