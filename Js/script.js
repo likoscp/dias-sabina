@@ -79,3 +79,9 @@ function showSlides(n) {
   dots[slideIndexJs-1].className += " active";
 }
 
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  var searchQuery = document.getElementById('searchQuery').value;
+  var searchPageUrl = '/dias-sabina/searchPage.html'; 
+  window.location.href = `${searchPageUrl}?search=${encodeURIComponent(searchQuery)}`;
+});
