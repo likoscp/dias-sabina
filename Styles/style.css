@@ -190,7 +190,7 @@ a::after {
     width: clamp(200px, 5vw, 300px);
     height: clamp(25px, 5vw, 37.6px);
     font-family: 'Pixelify Sans', sans-serif;
-    padding-left: 3%;
+    padding-left: 1%;
 }
 @media (max-width: 1320px) {
     .section-background h2,
