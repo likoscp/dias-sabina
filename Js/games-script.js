@@ -232,14 +232,3 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleLabelClass(checkbox);
         });
     });
-    function getsearchTestParam() {
-        var params = new URLSearchParams(window.location.search);
-        return params.get('search');
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        var searchTest = getsearchTestParam();
-        if (searchTest) {
-            document.getElementById('searchTestOnSearchPage').value = decodeURIComponent(searchTest);
-        }
-    });
