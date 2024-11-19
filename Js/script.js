@@ -35,6 +35,12 @@ function toggleTheme() {
 
 document.addEventListener("DOMContentLoaded", function() {
     applySavedTheme();
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      var searchQuery = document.getElementById('searchQuery').value;
+      window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
+      
+    });
 
 });
 
@@ -80,9 +86,3 @@ function showSlides(n) {
   dots[slideIndexJs-1].className += " active";
 }
 
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
-  var searchQuery = document.getElementById('searchQuery').value;
-  window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
-  
-});
