@@ -232,14 +232,14 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleLabelClass(checkbox);
         });
     });
-    function getSearchQueryParam() {
+    function getsearchTestParam() {
         var params = new URLSearchParams(window.location.search);
         return params.get('search');
     }
     
     document.addEventListener('DOMContentLoaded', () => {
-        var searchQuery = getSearchQueryParam();
-        if (searchQuery) {
-            document.getElementById('searchQueryOnSearchPage').value = decodeURIComponent(searchQuery);
+        var searchTest = getsearchTestParam();
+        if (searchTest) {
+            document.getElementById('searchTestOnSearchPage').value = decodeURIComponent(searchTest);
         }
     });
