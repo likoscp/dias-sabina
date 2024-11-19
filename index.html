@@ -25,7 +25,7 @@
             <h2 style="color: white;">Welcome to GamersLab!</h2>
             <p style="color: white;">Here you can Find your best game</p>
             <form id="searchForm" action="#" method="get" class="d-flex">
-                <input id="searchTest" class="form_search" type="text" name="search" placeholder="Search..." aria-label="Search">
+                <input id="searchQuery" class="form_search" type="text" name="search" placeholder="Search..." aria-label="Search">
                 <button type="submit" class="btn-danger" style="margin-left: 10px;">Search</button>
             </form>
         </div>
@@ -222,8 +222,8 @@
     <script>
         document.getElementById('searchForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
-            var searchTest = document.getElementById('searchTest').value;
-            window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchTest)}`;
+            var searchQuery = document.getElementById('searchQuery').value;
+            window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
             
           });
     </script>

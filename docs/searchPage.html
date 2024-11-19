@@ -100,15 +100,15 @@
     <script src="/dias-sabina/Js/user.js"></script>
     <script src="/dias-sabina/Js/header.js"></script>
     <script>
-        function getsearchTestParam() {
+        function getsearchQueryParam() {
             var params = new URLSearchParams(window.location.search);
             return params.get('search');
         }
         
         document.addEventListener('DOMContentLoaded', () => {
-            var searchTest = getsearchTestParam();
-            if (searchTest) {
-                document.getElementById('searchTestOnSearchPage').value = decodeURIComponent(searchTest);
+            var searchQuery = getsearchQueryParam();
+            if (searchQuery) {
+                document.getElementById('searchQueryOnSearchPage').value = decodeURIComponent(searchQuery);
             }
         });
     </script>
