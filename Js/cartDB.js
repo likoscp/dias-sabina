@@ -72,10 +72,10 @@ function removeGame(id) {
 function buyGame(id) {
     const index = gamesDB.findIndex((game) => game.id === id);
     if (index !== -1) {
-        totalPrice += gamesDB[index].price; // Добавляем цену к общей сумме
-        gamesDB.splice(index, 1); // Удаляем игру из базы данных
-        updateTotalPrice(); // Обновляем отображение общей суммы
-        renderGames(); // Перерисовываем список игр
+        totalPrice += gamesDB[index].price; 
+        gamesDB.splice(index, 1); 
+        updateTotalPrice(); 
+        renderGames(); 
     }
 }
 
@@ -84,6 +84,10 @@ function buyAll() {
     gamesDB.length = 0; 
     updateTotalPrice(); 
     renderGames(); 
+    alert("Redirect to Paypal...")
+    setTimeout(() => {
+        window.location.href = "https://www.paypal.com/";
+    }, 7000); 
 }
 
 function clearAll() {
