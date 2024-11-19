@@ -185,26 +185,6 @@ function loadFilterSettings() {
     });
 }
 
-function displayGameDetails(gameId) {
-    const game = gamesDB.find(g => g.id === parseInt(gameId));
-    if (game) {
-        return layouts.detailed(game);
-    } else {
-        return 'Game not found';
-    }
-}
-
-
-const gameIdFromUrl = new URLSearchParams(window.location.search).get('gameID');
-
-const gameId = gameIdFromUrl; 
-const game = gamesDB.find(g => g.id === parseInt(gameId));
-
-if (game) {
-    document.getElementById('gameElement').innerHTML = layouts.detailed(game);
-} else {
-    document.getElementById('gameElement').innerHTML = 'Game not found';
-}
 
 document.querySelector('input[type="text"]').addEventListener('input', saveFilterSettings);
 document.getElementById('price').addEventListener('change', saveFilterSettings);
@@ -235,13 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
             displayGames(gamesDB); 
         }
     });
-    const urlParams = new URLSearchParams(window.location.search);
-    const gameId = urlParams.get('gameID') || localStorage.getItem('currentGameId');
-    const gameDetailsHtml = displayGameDetails(gameId);
-    const gameElement = document.getElementById('gameElement');
-    if (gameElement) {
-        gameElement.innerHTML = gameDetailsHtml;
-    }
 });
 
     const checkboxes = document.querySelectorAll('.section-search .hide-checkbox');
