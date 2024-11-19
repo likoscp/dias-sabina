@@ -82,6 +82,5 @@ function showSlides(n) {
 document.getElementById('searchForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
   var searchQuery = document.getElementById('searchQuery').value;
-  var searchPageUrl = '/dias-sabina/searchPage.html'; 
-  window.location.href = `${searchPageUrl}?search=${encodeURIComponent(searchQuery)}`;
+  window.location.href = `/dias-sabina/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
 });
