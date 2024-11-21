@@ -4,19 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=/Styles/style.css>
-    <script src="loadHeaderFooter.js"></script>
-    <link rel="stylesheet" href=/Styles/style-test.css>
+    <script src="/dias-sabina/docs/loadHeaderFooter.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script type="module" src="/Js/games-script.js"></script>
-    
-    
-    <link rel="stylesheet" href=/Styles/style.css>
-    <link rel="stylesheet" href=/Styles/style-test.css>
+    <script type="module" src="/dias-sabina/Js/games-script.js"></script>    
+    <link rel="stylesheet" href="/dias-sabina/Styles/style.css">
+    <link rel="stylesheet" href="/dias-sabina/Styles/style-test.css">
     <title>Search page</title>
 </head>
 
@@ -29,30 +25,17 @@
         <h2>Search</h2>
         <p>Find your best game!</p><br>
         <div class="tags">
-            <button id="mmorpgBtn" type="button" class="btn btn-light">MMORPG</button>
-            <button id="mmoBtn" type="button" class="btn btn-light">MMO</button>
-            <button id="storyBtn" type="button" class="btn btn-light">Story</button>
-            <button id="apocalypseBtn" type="button" class="btn btn-light">Apocalypse</button>
-            <button id="pixelBtn" type="button" class="btn btn-light">PIXEL</button>
-            <button id="shoouterBtn" type="button" class="btn btn-light">Shooters</button>
-            <button id="detectiveBtn" type="button" class="btn btn-light">Detective</button>
-            <button id="fantasyBtn" type="button" class="btn btn-light">Fantasy</button>
-            <button id="gachaBtn" type="button" class="btn btn-light">Gacha</button>
-            <button id="adventureBtn" type="button" class="btn btn-light">Adventure</button>
-
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="mmorpg" class="hide-checkbox"> MMORPG</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="mmo" class="hide-checkbox"> MMO</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="story" class="hide-checkbox"> Story</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="apocalypse" class="hide-checkbox"> Apocalypse</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="pixel" class="hide-checkbox"> PIXEL</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="shoouter" class="hide-checkbox"> Shooters</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="detective" class="hide-checkbox"> Detective</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="fantasy" class="hide-checkbox"> Fantasy</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="gacha" class="hide-checkbox"> Gacha</label>
+            <label class="btn btn-light"><input type="checkbox" autocomplete="off" id="adventure" class="hide-checkbox"> Adventure</label>
         </div>
-        <!-- <div class="tags">
-            <label><input type="checkbox" id="mmorpgCheckbox"> MMORPG</label>
-            <label><input type="checkbox" id="mmoCheckbox"> MMO</label>
-            <label><input type="checkbox" id="storyCheckbox"> Story</label>
-            <label><input type="checkbox" id="apocalypseCheckbox"> Apocalypse</label>
-            <label><input type="checkbox" id="pixelCheckbox"> PIXEL</label>
-            <label><input type="checkbox" id="shooterCheckbox"> Shooters</label>
-            <label><input type="checkbox" id="detectiveCheckbox"> Detective</label>
-            <label><input type="checkbox" id="fantasyCheckbox"> Fantasy</label>
-            <label><input type="checkbox" id="gachaCheckbox"> Gacha</label>
-            <label><input type="checkbox" id="adventureCheckbox"> Adventure</label>
-        </div> -->
     </section>
     <main>
 
@@ -60,7 +43,7 @@
         <div class="sidebar">
             <form>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
+                    <input class="form-control" type="text" placeholder="Search..." aria-label="Search" id="searchQueryOnSearchPage" >
 
                     <label for="price">Free</label><br>
                     <input type="range" id="price" name="price" min="0" max="10000"><br>
@@ -111,11 +94,24 @@
     </main>
 
     <footer id="footer"></footer>
-    <script src="/Js/script.js"></script>
-    <script src="/Js/data.js"></script>
-    <script src="/Js/play_sound.js"></script>
-    <script src="/Js/user.js"></script>
-    <script src="/Js/header.js"></script>
+    <script src="/dias-sabina/Js/script.js"></script>
+    <script src="/dias-sabina/Js/data.js"></script>
+    <script src="/dias-sabina/Js/play_sound.js"></script>
+    <script src="/dias-sabina/Js/user.js"></script>
+    <script src="/dias-sabina/Js/header.js"></script>
+    <script>
+        function getsearchQueryParam() {
+            var params = new URLSearchParams(window.location.search);
+            return params.get('search');
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            var searchQuery = getsearchQueryParam();
+            if (searchQuery) {
+                document.getElementById('searchQueryOnSearchPage').value = decodeURIComponent(searchQuery);
+            }
+        });
+    </script>
 </body>
 
 </html>

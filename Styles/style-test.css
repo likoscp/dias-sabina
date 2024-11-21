@@ -178,3 +178,12 @@ nav ul li a {
         padding: 20px;
     }
 }
+.hide-checkbox {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.tags .btn-light:active,  .btn-light:active {
+    box-shadow: 0 0 10px #120101;
+}

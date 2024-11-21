@@ -190,7 +190,7 @@ a::after {
     width: clamp(200px, 5vw, 300px);
     height: clamp(25px, 5vw, 37.6px);
     font-family: 'Pixelify Sans', sans-serif;
-    padding-left: 3%;
+    padding-left: 1%;
 }
 @media (max-width: 1320px) {
     .section-background h2,
@@ -397,7 +397,7 @@ input[type="search"] {
     width: 300px;
     border-radius: 8px;
 }
-img {width: 100%; margin-left: 3%;padding-right: 3%;}
+img {width: 100%; }
 
 /* .content a:visited{
     color: #fff;;
@@ -417,7 +417,7 @@ img {width: 100%; margin-left: 3%;padding-right: 3%;}
     text-align: center;
     color: #8D9899;
     background:
-        url('/src/pattern.jpg');
+        url('/dias-sabina/src/pattern.jpg');
     background-position: center;
 }
 
@@ -709,9 +709,8 @@ img {width: 100%; margin-left: 3%;padding-right: 3%;}
     -moz-appearance: none;
     width: 40px!important;
     height: 20px!important;
-    border: 1.2px solid #9b9b9b!important;
     border-radius: 10px!important;
-    background-color: #fff;
+    background-color: #b6b6b6;
     position: relative!important;
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;

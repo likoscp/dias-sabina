@@ -35,6 +35,8 @@ function toggleTheme() {
 
 document.addEventListener("DOMContentLoaded", function() {
     applySavedTheme();
+    
+
 });
 
 function toggleMenu() {

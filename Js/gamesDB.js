@@ -3,10 +3,10 @@ const gamesDB = [
         id: 0,
         title: "Minecraft",
         company: "Mojang",
-        priceRange: 0,
+        priceRange: 5000,
         year: 2021,
         released: true,
-        tags: ["MMORPG", "Fantasy"],
+        tags: ["mmorpg", "fantasy", "shoouter", "adventure"],
         description: "Minecraft is a sandbox game that allows players to build and explore their own worlds made up of blocks. Survive the night by crafting weapons and building shelters or unleash your creativity by constructing elaborate structures.",
         photoLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbWOL6AqgFI9M4eblTENTH_X5OYkzBMpvZA&s",
         link: "https://www.minecraft.net/en-us",
@@ -60,7 +60,7 @@ const gamesDB = [
         priceRange: 0,
         year: 2022,
         released: true,
-        tags: ["MMO", "Fantasy"],
+        tags: ["mmo", "fantasy"],
         description: "Honkai Impact 3RD is an anime-style action RPG featuring a dynamic combat system. Players assume the role of Valkyries who battle against mysterious enemies in an engaging story filled with twists.",
         photoLink: "https://fastcdn.hoyoverse.com/mi18n/bh3_global/m20230317hy14h0glc0/upload/383cea039f33224c68dc7bae58660f9b_8895472244546253302.png",
         link: "https://honkaiimpact3.hoyoverse.com/en",
@@ -99,9 +99,9 @@ const gamesDB = [
             }
         ],
         gallery: [
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_herrscher_of_void.jpg",
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_theresa.jpg",
-            "https://honkaiimpact3.hoyoverse.com/en/assets/images/characters/impact3rd/v5.9_character_honkai_impact.jpg"
+            "https://images7.alphacoders.com/107/1079914.png",
+            "https://images5.alphacoders.com/108/1088594.png",
+            "https://images7.alphacoders.com/124/1245090.jpg"
         ]
     },
     {
@@ -112,7 +112,7 @@ const gamesDB = [
         priceRange: 0,
         year: 2023,
         released: true,
-        tags: ["pixel", "Fantasy"],
+        tags: ["pixel", "fantasy"],
         description: "Undertale is a unique RPG where you can choose your path. With charming characters and witty dialogue, you can either fight or befriend your foes in a quirky underground world.",
         photoLink: "https://staging.cohostcdn.org/attachment/5ed9a732-5a82-4ba3-b424-1ed4f4d97000/undertaleann_signed.png?width=675&auto=webp&dpr=1",
         link: "https://undertale.com/",
@@ -162,6 +162,7 @@ const gamesDB = [
         company: "Nintendo",
         priceRange: 0,
         year: 2024,
+        tags: ["mmorpg", "fantasy"],
         released: true,
         description: "Embark on an epic journey through Hyrule in this open-world adventure. Solve puzzles, defeat monsters, and uncover the mysteries of the ancient kingdom.",
         photoLink: "https://media.wired.com/photos/633c95ef85e7a4cc2f802256/master/pass/Breath-of-the-Wild-Casual-Gamer-Culture.jpg",
@@ -212,6 +213,7 @@ const gamesDB = [
         company: "mihoyo",
         priceRange: 0,
         year: 2020,
+        tags: ["mmorpg", "fantasy"],
         released: false,
         description: "Immerse yourself in Night City, a vibrant metropolis obsessed with power, glamour, and body modification. Play as V, a customizable mercenary with a story shaped by your choices.",
         photoLink: "https://store-images.s-microsoft.com/image/apps.36537.14143814686075364.7e443c56-2382-4bea-8ceb-35638e527cd6.475937df-e65f-4850-b2f0-471c2966f074",
@@ -262,6 +264,7 @@ const gamesDB = [
         company: "mihoyo",
         priceRange: 0,
         year: 2025,
+        tags: ["mmorpg", "fantasy"],
         released: false,
         description: "Escape to the countryside and build your dream farm in Stardew Valley. Plant crops, raise animals, fish, and engage with the local community in this charming farming simulator.",
         photoLink: "https://i.ytimg.com/vi/WLA2lsas4J8/maxresdefault.jpg",

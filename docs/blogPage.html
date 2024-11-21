@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=/Styles/style.css>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="loadHeaderFooter.js"></script>
+    <script src="/dias-sabina/docs/loadHeaderFooter.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>News</title>
-    <script src="/Js/script.js"></script>
-    <script src="/Js/date.js"></script>
-    <script type="module" src="/Js/games-script.js"></script>
-    <link rel="stylesheet" href=/Styles/style.css>
-    <link rel="stylesheet" href=/Styles/style-test.css>
+    <script src="/dias-sabina/Js/script.js"></script>
+    <script src="/dias-sabina/Js/date.js"></script>
+    <script type="module" src="/dias-sabina/Js/games-script.js"></script>
+    <link rel="stylesheet" href="/dias-sabina/Styles/style.css">
+    <link rel="stylesheet" href="/dias-sabina/Styles/style-test.css">
     
 </head>
 
@@ -74,13 +73,10 @@
             </div>
         </div>
 
-        <section class="form_search">
-            <form action="#" method="get"></form>
-            <input type="search" id="search" name="search" placeholder="Search...">
-            <input type="submit" value="Search">
-            <br><br>
-            </form>
-        </section>
+        <section class="form_search"><form id="searchForm" action="#" method="get">
+            <input id="searchQuery" class="form_search" type="text" name="search" placeholder="Search..." aria-label="Search">
+            <button type="submit" class="btn-danger" style="margin-left: 10px;">Search</button>
+        </form></section>
 
         <section>
             <div class="news_page">
@@ -208,9 +204,16 @@
     <footer id="footer"></footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/Js/data.js"></script>
-    <script src="/Js/user.js"></script>
-    <script src="/Js/header.js"></script>
+    <script src="/dias-sabina/Js/data.js"></script>
+    <script src="/dias-sabina/Js/user.js"></script>
+    <script src="/dias-sabina/Js/header.js"></script>
+    <script scr="./Js/searchHandler.js"></script>
+    <script>document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var searchQuery = document.getElementById('searchQuery').value;
+        window.location.href = `/dias-sabina/docs/searchPage.html?search=${encodeURIComponent(searchQuery)}`;
+        
+      });</script>
 </body>
 
 </html>
